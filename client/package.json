@@ -40,7 +40,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +62,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.23.3"
+    "@babel/plugin-transform-modules-commonjs": "^7.23.3",
+    "serve": "^14.2.1"
   }
 }
