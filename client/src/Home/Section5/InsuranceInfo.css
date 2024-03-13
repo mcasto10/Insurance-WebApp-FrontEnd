@@ -1,0 +1,158 @@
+/* Add your styles here */
+
+.section5 {
+  padding: 0;
+  height: 950px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #3F5978;
+  background-color: #fff;
+}
+
+.slider-container {
+  margin-left: 300px;
+  margin-right: 300px;
+  color: #3F5978;
+}
+
+.section-title {
+  font-size: 54px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.slider-content {
+  font-size: 24px;
+  text-align: left;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+}
+
+.slider-heading {
+  font-size: 40px;
+  text-align: center;
+}
+
+.slider-text {
+  line-height: 2;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Larger screens */
+@media screen and (min-width: 1477px) {
+  .slider-container {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+}
+
+/* Medium-sized screens */
+@media screen and (min-width: 1280px) and (max-width: 1476px) {
+  .slider-container {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .section-title {
+    font-size: 54px;
+  }
+
+  .slider-content {
+    font-size: 20px;
+  }
+
+  .slider-image {
+    width: 95%;
+  }
+
+  .slider-heading {
+    font-size: 36px;
+  }
+
+  .slider-text {
+    font-size: 16px;
+  }
+}
+
+/* Smaller screens */
+@media screen and (min-width: 1079px) and (max-width: 1279px) {
+  .slider-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .section-title {
+    font-size: 54px;
+  }
+
+  .slider-content {
+    font-size: 18px;
+  }
+  .slider-image {
+    width: 90%;
+  }
+
+  .slider-heading {
+    font-size: 32px;
+  }
+
+  .slider-text {
+    font-size: 15px;
+  }
+}
+
+/* Extra-small screens */
+@media screen and (min-width: 968px) and (max-width: 1078px) {
+  .slider-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .section-title {
+    font-size: 54px;
+    margin-top: 15%;
+  }
+
+  .slider-content {
+    font-size: 16px;
+  }
+
+  .slider-heading {
+    font-size: 24px;
+  }
+
+  .slider-text {
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 967px) {
+  .slider-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .section-title {
+    font-size: 54px;
+    margin-top: 25%;
+  }
+
+  .slider-content {
+    font-size: 16px;
+  }
+
+  .slider-heading {
+    font-size: 24px;
+  }
+
+  .slider-text {
+    font-size: 14px;
+  }
+}

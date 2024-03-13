@@ -1,0 +1,6 @@
+/* Add this to your CSS file or style block */
+.hoverButton:hover {
+    transform: scale(1.1); /* Increase the size on hover, you can adjust the scale factor as needed */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }
+  

@@ -1,0 +1,290 @@
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow properties as needed */
+    padding: 20px; /* Add padding as needed */
+    border: 2px solid #e6e6e6; /* Add border properties as needed */
+  }x
+  
+
+  .welcome-container {
+    line-height: 56px;
+    text-align: left;
+    font-weight: lighter;
+    color: #3F5978;
+  }
+  
+  .login-card {
+    width: 400px;
+    padding: 30px 32px;
+    border-radius: 1.25rem;
+    text-align: center;
+    transition: 0.4s;
+  }
+  
+  .login-card > h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 30px;
+  }
+  
+  
+  .login-form {
+    width: 100%;
+    margin: 0;
+    display: grid;
+  }
+  
+  .login-form input.control::placeholder {
+    color: #9d9fbd;
+  }
+  
+  .control {
+    border: 1.5px solid #dfe1f0;
+    outline: none;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    background: #f6f7ff;
+    color: inherit;
+    border-radius: 6px;
+    margin: 8px 0;
+    font-family: inherit;
+    text-align: left;
+    font-size: 18px;
+    transition: 0.4s;
+  }
+  
+  button.control {
+    cursor: pointer;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    background: #5e92d5;
+    color: #f7f7f7;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+  }
+  
+  .bars {
+    margin: 8px 0;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 6px;
+    border-radius: 3 px;
+    background: #dfe1f0;
+  }
+  
+  .bars div {
+    height: 6px;
+    border-radius: 3px;
+    transition: 0.4s;
+    width: 0%;
+  }
+
+  /* "very weak", "weak", "moderate", "strong", "very strong" */
+  
+  .bars.very-weak div{
+    background-color: #FF4136; /* Red */
+    width: 20%;
+  }
+  
+  .bars.weak div{
+    background-color: #FF851B; /* Orange */
+    width: 40%;
+  }
+  
+  .bars.moderate div{
+    background-color: #FFDC00; /* Yellow */
+    width: 60%;
+  }
+  
+  .bars.strong div{
+    background-color: #2ECC40; /* Green */
+    width: 80%;
+  }
+  
+  .bars.very-strong div{
+    background-color: #0074D9; /* Blue */
+    width: 100%;
+  }
+
+  .strength {
+    text-align: left;
+    height: 30px;
+    text-transform: capitalize;
+    color: #868b94;
+  }
+
+  .separator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+    margin-top: 6px;
+  }
+
+  .separator .line {
+    height: 1px;
+    width: 40%;
+    background-color: #dbdbdb;
+  }
+  
+  .other {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forgot-password {
+    font-size: 11px;
+    color: #003569;
+  }
+
+  .box {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    flex-grow: 1;
+  }
+
+  ul.helper-text {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #808080;
+  }
+
+  ul.helper-text li.valid {
+    color: #1AB23E;
+    text-decoration-line: line-through;
+  }
+
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .signUpText {
+    text-align: center;
+    font-size: 50px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: lighter;
+    color: #3F5978;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+
+  /* Login Dash */
+
+  .header {
+    font-size: 24px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left {
+    margin-left: 300px;
+  }
+
+  .upcoming-events-dashboard {
+    width: 600px;
+    height: 450px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .right {
+    margin-right: 300px;
+  }
+
+  .quick-action-dashboard {
+    width: 300px;
+    height: 450px;
+ 
+    margin-left: 10px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .make-event {
+    background-color: #3F5978; /* State Farm green */
+    color: #ffffff;
+    width: 220px;
+    padding: 10px 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2px;
+    
+  }
+  
+  .make-appointment:hover {
+    background-color: #006738; /* Darker green on hover */
+  }
+  
+  .content2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+.upcoming-summary {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 250px;
+}
+
+
+
+.underlined {
+  text-decoration: underline;
+}

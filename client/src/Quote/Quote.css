@@ -1,0 +1,349 @@
+.indexedStep {
+  color: white;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  background-color: rgba(211, 211, 211, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.indexedStep.accomplished {
+  background-color: rgba(0, 116, 217, 1);
+}
+
+/* Page layout */
+.quote-Position {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.line {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+  /* Adjust as needed */
+}
+
+
+/* Position of contact information */
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+/* Label for user contact */
+.label {
+  width: 100px;
+}
+
+
+.review-button {
+  width: 20%;
+  padding: 8px;
+  margin-top: 10px;
+  background-color: #3F5978;
+}
+
+
+
+
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+/* --------------------- */
+
+/* Contact information for email  */
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  width: calc(50% - 10px);
+  /* Adjust width as needed, considering margin and space between */
+
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.input-container label {
+  margin-bottom: 5px;
+}
+
+
+/* -------------------- */
+
+/* Placing of section 1 stuff */
+
+.quote-container {
+  display: flex;
+  /* Make it a flex container */
+  justify-content: space-between;
+  /* Optional: Add spacing between the child elements */
+}
+
+.left-column {
+  margin-top: 100px;
+}
+
+.left-column .startQuoteHeader {
+  font-size: 65px; 
+  font-weight: bold;
+  color: #3F5978;
+}
+
+.right-column {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+/* ------------------------- */
+
+.md-textbox-Qoute {
+  position: relative;
+  font-family: "Euclid Circular A";
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: right;
+  /* Align text within the container to the right */
+}
+
+.md-textbox-Qoute label,
+.md-textbox-Qoute span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888888;
+  transition: 0.3s;
+}
+
+/* Adjust the label styles to position it inside the text box to the right */
+.md-textbox-Qoute>label {
+  left: auto;
+  /* Remove the left positioning */
+  right: 135px;
+  /* Adjust the right value to control its distance from the right edge */
+  padding: 4px 8px;
+}
+
+.md-textbox-Qoute input {
+  text-align: left;
+}
+
+.md-textbox-Qoute>span {
+  right: 16px;
+  font-size: 28px;
+}
+
+.md-textbox-Qoute>input {
+  height: 56px;
+  width: 220px;
+  padding-left: 16px;
+  border: 2px solid #888888;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: #888888;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.md-textbox-Qoute input:focus,
+.md-textbox-Qoute .has-value {
+  border-color: #2b81ea;
+}
+
+.md-textbox-Qoute input:focus~span,
+.md-textbox-Qoute .has-value~span {
+  color: #f9f9f9;
+}
+
+.md-textbox-Qoute input:focus~label,
+.md-textbox-Qoute .has-value~label {
+  background: white;
+  color: #888888;
+  transform: translateY(-46px);
+}
+
+/* Css for setting the position for "choose your insurance type" */
+
+.biggerSelect {
+  width: 220px;
+  height: 56px;
+  font-size: 16px;
+  border: 2px solid #888888;
+  border-radius: 8px;
+  padding: 15px;
+
+  outline: none;
+  background: transparent;
+  color: #888888;
+  font-family: inherit;
+  /* Adjust the length of the text box */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+  /* Standard property */
+}
+
+.select-container-Quote {
+  display: flex;
+  justify-content: center;
+  /* Center both vertically and horizontally */
+  align-items: center;
+  margin-bottom: 30px;
+  /* Add margin to push content down */
+  flex-direction: column;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Style simlar to that of a button */
+
+.button-like-input {
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 12px 2vw; /* Use vw for responsive padding */
+  background-color: #3F5978;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #ffff;
+  width: 100%; /* Set width to 12% for larger screens */
+  transition: width 0.3s ease-in-out; /* Add transition for smoother effect */
+}
+
+.button-like-input:hover {
+  background-color: #76879c;
+}
+
+
+.beginQouteButton,
+.button-QuotePage {
+  border: 1px solid #ccc;
+  padding: 12px 2vw; /* Use vw (viewport width) for responsive padding */
+  background-color: #3F5978;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #ffff;
+  width: 12%;
+  transition: width 0.3s ease-in-out; /* Add transition for smoother effect */
+}
+
+.beginQouteButton:hover,
+.button-QuotePage:hover {
+  background-color: #76879c;
+}
+
+.beginQouteButton {
+  font-size: 16px;
+  width: 20%;
+  margin-left: 80%;
+
+}
+
+@media screen and (max-width: 1380px) {
+  .quote-Position {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .button-QuotePage {
+    width: 20%; 
+  }
+
+  .beginQouteButton{
+    margin-left: 76%;
+    width: 25%;
+    font-size: 14px;
+  }
+
+  .left-column .startQuoteHeader {
+    font-size: 55px; 
+  }
+
+
+
+}
+
+@media screen and (max-width: 825px) {
+  .quote-Position {
+    margin-left: 100px;
+    margin-right: 100px;
+
+  }
+
+  .beginQouteButton{
+    margin-left: 65%;
+    width: 35%;
+    font-size: 14px;
+  }
+
+  .button-QuotePage {
+    width: 30%; 
+  }
+
+  .left-column .startQuoteHeader {
+    font-size: 45px; 
+  }
+
+
+}
+
+@media screen and (max-width: 465px) {
+  .quote-Position {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .button-QuotePage {
+    width: 100%; 
+  }
+
+  .beginQouteButton{
+    margin-left: 50%;
+    width: 60%;
+  }
+
+  .left-column .startQuoteHeader {
+    font-size: 35px; 
+  }
+
+}

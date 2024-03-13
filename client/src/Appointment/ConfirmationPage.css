@@ -1,0 +1,14 @@
+.ConfirmBody {
+    margin-left: 300px;
+    margin-right: 280px;
+}
+
+.ConfirButton {
+    margin-top: 2%;
+    background-color: #3F5978;
+
+}
+
+.ConfirButton:hover {
+    background-color: #76879c;
+  }

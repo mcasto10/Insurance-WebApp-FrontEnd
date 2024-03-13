@@ -1,0 +1,64 @@
+/* Default styles */
+.md-zipCode-textbox {
+  position: relative;
+  font-family: "Euclid Circular A";
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.md-zipCode-textbox :is(label, span) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888888;
+  transition: 0.3s;
+}
+
+.md-zipCode-textbox > label {
+  left: 10px;
+  transform: translateY(-50%);
+  padding: 4px 8px;
+  transition: 0.3s;
+}
+
+.md-zipCode-textbox > span {
+  right: 16px;
+  font-size: 28px;
+}
+
+.md-zipCode-textbox > input {
+  height: 56px;
+  width: 210px;
+  padding-left: 16px;
+  border: 2px solid #888888;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: #888888;
+  font-family: inherit;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.md-zipCode-textbox > :is(input:focus, .has-value) {
+  border-color: #3f5978;
+}
+
+.md-zipCode-textbox > :is(input:focus, .has-value) ~ span {
+  color: #f9f9f9;
+}
+
+.md-zipCode-textbox > :is(input:focus, .has-value) ~ label {
+  background: white;
+  color: #888888;
+  transform: translateY(-46px);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .md-zipCode-textbox > label {
+    font-size: 12px;
+    left: 5px;
+  }
+}

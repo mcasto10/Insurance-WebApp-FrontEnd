@@ -1,0 +1,33 @@
+.auto-mobile-input-form {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.auto-mobile-input-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.auto-mobile-input-form select,
+.auto-mobile-input-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.auto-mobile-input-form h3 {
+    color: #333;
+}
+
+.auto-mobile-input-form ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.auto-mobile-input-form li {
+    margin-bottom: 8px;
+    color: #555;
+}
+

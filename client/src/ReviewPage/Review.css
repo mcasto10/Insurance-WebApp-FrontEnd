@@ -1,0 +1,27 @@
+/* Base star styling */
+.star {
+  color: #ffd700; /* Gold color for filled stars */
+  pointer-events: none; /* Prevent hover effects */
+  font-size: 24px; /* Adjust the font size for bigger stars */
+}
+
+/* Filled stars */
+.star.filled {
+  color: #ffd700;
+}
+
+/* Half-filled stars */
+.star.half-filled {
+  position: relative;
+}
+
+.star.half-filled::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  color: #ffd700;
+  width: 50%;
+  font-size: 24px; /* Adjust the font size for bigger stars */
+  pointer-events: none; /* Prevent hover effects */
+}

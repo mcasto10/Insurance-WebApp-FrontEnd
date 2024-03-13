@@ -1,0 +1,127 @@
+/* PageLayout.css */
+
+.pageLayout {
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.leftContent,
+.rightContent {
+  width: 48%; 
+  box-sizing: border-box;
+}
+
+.leftContent {
+  float: left;
+}
+
+.rightContent {
+  float: right;
+}
+
+.buttonContainer {
+  justify-content: space-between;
+}
+
+.AutoRegButton {
+  background-color: #3F5978;
+
+
+}
+
+.AutoRegButton {
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 14px 16px;
+  background-color: #3F5978;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 20px;
+  color: #ffff;
+  width: 40%; /* Set width to 100% to span the entire screen */
+}
+
+.AutoRegButton:hover {
+  background-color: #76879c;
+}
+
+.location-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1375px) {
+  .pageLayout {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+
+}
+
+@media screen and (max-width: 1202px) {
+  .pageLayout {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .pageLayout {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .AutoRegButton,
+  .location-box {
+    width: 100%; /* Set width to 100% for the smallest screens */
+  }
+}
+
+@media screen and (max-width: 852px) {
+  .pageLayout {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .AutoRegButton,
+  .location-box {
+    width: 100%; /* Set width to 100% for the smallest screens */
+  }
+}
+
+@media screen and (max-width: 803px) {
+  .pageLayout {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .leftContent{
+    width: 100%;
+  }
+
+  .rightContent{
+    display: none;
+  }
+
+  .AutoRegButton,
+  .location-box {
+    width: 100%; /* Set width to 100% for the smallest screens */
+  }
+}

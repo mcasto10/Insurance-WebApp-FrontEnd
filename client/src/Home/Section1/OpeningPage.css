@@ -1,0 +1,221 @@
+/* Common Styles for All Screen Sizes */
+.section1 {
+    padding: 0;
+    height: 650px;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #3F5978;
+    background-color: #ffff;
+}
+
+.section1-p {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.headerContainer {
+    width: 100%;
+    padding: 0;
+    height: 700px;
+    margin: 0;
+    color: #3F5978;
+    margin-top: 10px;
+}
+
+.headerContainer h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.headerContainer p.openingText {
+    font-size: 52px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-left: 300px;
+    margin-right: 900px;
+    margin-top: 75px;
+}
+
+.headerContainer .zipcodeButtonContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.headerContainer .zipcodeButtonContainer button {
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3F5978;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+.headerContainer .zipcodeButtonContainer button:hover {
+    background-color: #3F5978;
+}
+
+.homeImage {
+    position: absolute;
+    right: 300px;
+    top: 20%;
+    width: 33%;
+    height: 53%;
+}
+
+.quote-box-section1 {
+    max-width: 400px;
+}
+
+.homebiggerSelect {
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #888888;
+    font-family: inherit;
+    color: #888888;
+    padding: 15px;
+    width: 350px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Media Query for 1200px and larger screens */
+@media screen and (min-width: 1505px) {
+    .section1 {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+}
+
+@media screen and (min-width: 1403px) and (max-width: 1504px){
+    .section1 {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+
+    .headerContainer {
+        width: 60%;
+    }
+
+    .headerContainer p.openingText {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+
+}
+
+@media screen and (min-width: 1240px) and (max-width: 1402px) {
+    .section1 {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .headerContainer {
+        width: 60%;
+    }
+    .headerContainer p.openingText {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+
+    .homeImage {
+        right: 250px;
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1239px) {
+    .section1 {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .headerContainer {
+        width: 65%;
+    }
+    .headerContainer p.openingText {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+
+    .homeImage {
+        right: 200px;
+    }
+}
+
+/* Media Query for 768px and larger screens */
+@media screen and (min-width: 915px) and (max-width: 1099px) {
+    .section1 {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .headerContainer {
+        width: 60%;
+    }
+
+    .headerContainer p.openingText {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .homeImage {
+        right: 150px;
+    }
+}
+
+
+/* Media Query for 576px and larger screens */
+@media screen and (min-width: 788px) and (max-width: 914px) {
+    .section1 {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .headerContainer {
+        width: 60%;
+    }
+
+    .headerContainer p.openingText {
+        font-size: 50px; /* Adjusted font size for smaller screens */
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .homeImage {
+        right: 100px;
+    }
+}
+
+
+
+/* Media Query for 576px and larger screens */
+@media screen and (min-width: 0px) and (max-width: 787px) {
+    .section1 {
+        margin-left: 15px;
+        margin-right: 0p
+    }
+
+    .headerContainer {
+        width: 70%;
+    }
+
+    .headerContainer p.openingText {
+        font-size: 50px; /* Adjusted font size for smaller screens */
+        margin-left: 15px;
+        margin-right: 0px;
+    }
+
+    .homeImage {
+        display: none;    
+    }
+}
