@@ -267,7 +267,7 @@ const CoverageRequest = () => {
       {(selections.Auto || selections.RV || selections.ClassicCar || selections.Motorcycle) && (
         <div className="input-container">
           <label htmlFor="compDeduct"> Comprehensive Deductible:</label>
-          <textarea
+          <input
             id="compDeduct"
             name="compDeduct"
             // value={
@@ -284,7 +284,7 @@ const CoverageRequest = () => {
 
             onChange={handleChange}
           // required
-          ></textarea>
+          ></input>
         </div>
       )}
 
@@ -292,7 +292,7 @@ const CoverageRequest = () => {
       {(selections.Business || selections.RV || selections.ClassicCar) && (
         <div className="input-container">
           <label htmlFor="liabilityLimit">Liability Limit:</label>
-          <textarea
+          <input
             id="liabilityLimit"
             name="liabilityLimit"
             // value={
@@ -309,7 +309,7 @@ const CoverageRequest = () => {
 
             onChange={handleChange}
           // required
-          ></textarea>
+          ></input>
         </div>
       )}
 
@@ -318,7 +318,7 @@ const CoverageRequest = () => {
         <>
           <div className="input-container">
             <label htmlFor="cargoLimit">Cargo Limit:</label>
-            <textarea
+            <input
               id="cargoLimit"
               name="cargoLimit"
               // value={userInfo.Business && userInfo.Business.coverageRequest.cargoLimit || ''}
@@ -326,12 +326,12 @@ const CoverageRequest = () => {
 
               onChange={handleChange}
             // required
-            ></textarea>
+            ></input>
           </div>
 
           <div className="input-container">
             <label htmlFor="physicalDamage">Physical Damage:</label>
-            <textarea
+            <input
               id="physicalDamage"
               name="physicalDamage"
               // value={userInfo.Business && userInfo.Business.coverageRequest.physicalDamage || ''}
@@ -339,12 +339,12 @@ const CoverageRequest = () => {
 
               onChange={handleChange}
             // required
-            ></textarea>
+            ></input>
           </div>
 
           <div className="input-container">
             <label htmlFor="generalLiability">General Liability Limit:</label>
-            <textarea
+            <input
               id="generalLiability"
               name="generalLiability"
               // value={userInfo.Business && userInfo.Business.coverageRequest.generalLiability || ''}
@@ -352,12 +352,12 @@ const CoverageRequest = () => {
 
               onChange={handleChange}
             // required
-            ></textarea>
+            ></input>
           </div>
 
           <div className="input-container">
             <label htmlFor="unidentifiedTrailer">Unidentitides/ None owned Trailer:</label>
-            <textarea
+            <input
               id="unidentifiedTrailer"
               name="unidentifiedTrailer"
               // value={userInfo.Business && userInfo.Business.coverageRequest.unidentifiedTrailer || ''}
@@ -365,12 +365,12 @@ const CoverageRequest = () => {
 
               onChange={handleChange}
             // required
-            ></textarea>
+            ></input>
           </div>
 
           <div className="input-container">
             <label htmlFor="trailerInterchange">Trailer Interchange:</label>
-            <textarea
+            <input
               id="trailerInterchange"
               name="trailerInterchange"
               // value={userInfo.Business && userInfo.Business.coverageRequest.trailerInterchange || ''}
@@ -378,7 +378,7 @@ const CoverageRequest = () => {
 
               onChange={handleChange}
             // required
-            ></textarea>
+            ></input>
           </div>
         </>
       )}
@@ -387,7 +387,7 @@ const CoverageRequest = () => {
       {(selections.RV || selections.ClassicCar) && (
         <div className="input-container">
           <label htmlFor="limbiPd">LIMBI & PD:</label>
-          <textarea
+          <input
             id="limbiPd"
             name="limbiPd"
             // value={
@@ -402,7 +402,7 @@ const CoverageRequest = () => {
 
             onChange={handleChange}
           // required
-          ></textarea>
+          ></input>
         </div>
       )}
 
@@ -410,7 +410,7 @@ const CoverageRequest = () => {
       {selections.ClassicCar && (
         <div className="input-container">
           <label htmlFor="carValue">Value of Car:</label>
-          <textarea
+          <input
             id="carValue"
             name="carValue"
             // value={userInfo.ClassicCar && userInfo.ClassicCar.coverageRequest.carValue || ''}
@@ -419,7 +419,7 @@ const CoverageRequest = () => {
 
             onChange={handleChange}
           // required
-          ></textarea>
+          ></input>
         </div>
       )}
     </div>

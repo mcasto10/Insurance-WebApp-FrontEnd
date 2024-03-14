@@ -34,20 +34,24 @@
 
 .AutoRegButton {
   background-color: #3F5978;
+}
 
-
+.PagesHeaderLayout {
+  color:#3F5978; 
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .AutoRegButton {
   appearance: none;
   border: 1px solid #ccc;
-  padding: 14px 16px;
+  padding: 10px 14px;
   background-color: #3F5978;
   cursor: pointer;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 18px;
   color: #ffff;
-  width: 40%; /* Set width to 100% to span the entire screen */
+  width: 30%; /* Set width to 100% to span the entire screen */
 }
 
 .AutoRegButton:hover {
@@ -59,7 +63,6 @@
   padding: 15px;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 

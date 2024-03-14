@@ -176,11 +176,12 @@ function SignUp() {
   return (
     <div className="center-container">
 
-      <p className='signUpText'>Sign Up</p>
+  
 
       {error && <div className="error-message" style={{ color: 'red' }}>{error}</div>}
 
       <div className="login-card">
+      <div className='signUpText'>Sign Up </div>
         <form className="login-form">
           <input
             autoComplete="off"

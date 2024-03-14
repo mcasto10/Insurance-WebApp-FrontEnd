@@ -47,19 +47,19 @@ const ContactUsPage = ({ onZipCodeChange }) => {
         <div className='pageLayout'>
             <div className='flexContainer'>
                 <div className='leftContent'>
-                    <h1 style={{ fontSize: '60px', color: '#3F5978', marginTop: '10%' }}>  Contact Us </h1>
-                    <p style={{ lineHeight: '1.5', fontWeight: '300', fontSize: '22px' }}>
+                    <h1 style={{ fontSize: '75px', color: '#3F5978', marginTop: '10%' }}>  Contact Us </h1>
+                    <p style={{ lineHeight: '1.5', fontWeight: '300', color: '#3F5978', fontSize: '22px' }}>
                         When it comes to protecting the things that are important to us, getting the right insurance protection is essential </p>
-                        <p style={{ fontWeight: '300', fontSize: '20px' }}> Get a quick quote now. </p>
+                    <p style={{ fontWeight: '300',  color: '#3F5978', fontWeight: 'bold', fontSize: '20px' }}> Get a quick quote now. </p>
 
-                   
+
                     <div>
 
 
 
                         {/* <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '20px' }}> Get a quick quote now. You may also talk to our agents directly at (310) 256-4748. </p> */}
 
-                        <p> Choose your insurance type </p>
+                        <p className='PagesHeaderLayout'> Choose your insurance type </p>
                         <select
                             id="insuranceType"
                             value={selectedOption}
@@ -76,7 +76,7 @@ const ContactUsPage = ({ onZipCodeChange }) => {
                             <option value="CommericalAuto">Commerical Auto</option>
                         </select>
                         <div className="zipcodeButtonContainer">
-                            <p> Enter your ZipCode </p>
+                            <p className='PagesHeaderLayout'> Enter your ZipCode </p>
 
                             <ZipCode onZipCodeChange={handleZipCodeChange} />
                             <button style={{ backgroundColor: '#3F5978' }} onClick={handleBeginQoute}> Begin Quote </button>
@@ -86,7 +86,7 @@ const ContactUsPage = ({ onZipCodeChange }) => {
                     </div>
 
 
-                    <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '20px' }}> You may also talk to our agents directly at <strong> (310) 256-4748 </strong>  or throgugh mail at <strong> customerservice@arisins.com </strong> </p>
+                    <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '20px',color: '#3F5978', }}> You may also talk to our agents directly at <strong> (310) 256-4748 </strong>  or throgugh mail at <strong> customerservice@arisins.com </strong> </p>
 
 
                 </div>
@@ -97,15 +97,15 @@ const ContactUsPage = ({ onZipCodeChange }) => {
 
             </div>
 
-            <div className='line'> </div>
+            <div className='line' style={{ marginTop: '5%', marginBottom: '5%'}}> </div>
 
 
             {/* <div style={{ textAlign: 'center' }}> */}
 
-            <h1 style={{ fontSize: '60px', color: '#3F5978' }}> Office Location </h1>
+            <h1 style={{ fontSize: '75px', color: '#3F5978' }}> Office Location </h1>
 
 
-            <div>    <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '22px', fontWeight: 'bold', color: '#3F5978'}}>  Make a Appointment </p>
+            <div>    <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '22px', fontWeight: 'bold', color: '#3F5978' }}>  Make a Appointment </p>
 
 
                 <div
@@ -121,7 +121,7 @@ const ContactUsPage = ({ onZipCodeChange }) => {
                         <div className='flexContainer'>
                             <div className='leftContent'>
                                 <h2 style={{ color: '#3F5978' }}> Harbor City</h2>
-                                <p style={{ fontWeight: '300', fontSize: '16px', lineHeight: '1.3'}}>
+                                <p style={{ fontWeight: '300',  color: '#3F5978',  fontSize: '16px', lineHeight: '1.3' }}>
                                     <strong>Address:</strong> 1212 Pacific Coast HWY Harbor City, CA 90710 <br />
                                     <strong>Personal Line:</strong> (310) 326-4771 <br />
                                     <strong>Commercial Line:</strong> (562) 616-0071 <br />
@@ -152,7 +152,7 @@ const ContactUsPage = ({ onZipCodeChange }) => {
                         <div className='flexContainer'>
                             <div className='leftContent'>
                                 <h2 style={{ color: '#3F5978' }}>  Paramount</h2>
-                                <p style={{ fontWeight: '300', fontSize: '16px', lineHeight: '1.3'}}>
+                                <p style={{ fontWeight: '300',  color: '#3F5978', fontSize: '16px', lineHeight: '1.3' }}>
                                     <strong>Address:</strong> 7922 Rosecrans Ave Suite E Paramount, CA 90723 <br />
                                     <strong>Personal Line:</strong> (562) 616-0070 <br />
                                     <strong>Commercial Line:</strong> (562) 616-0071 <br />
@@ -181,7 +181,7 @@ const ContactUsPage = ({ onZipCodeChange }) => {
                         <div className='flexContainer'>
                             <div className='leftContent'>
                                 <h2 style={{ color: '#3F5978' }}> San Pedro </h2>
-                                <p style={{ fontWeight: '300', fontSize: '16px', lineHeight: '1.3'}}>
+                                <p style={{ fontWeight: '300',  color: '#3F5978', fontSize: '16px', lineHeight: '1.3' }}>
                                     <strong>Address:</strong> 639 W Channel St Ste F San Pedro, CA 90731 <br />
                                     <strong>Personal Line:</strong> (310) 256-4748 <br />
                                     <strong>Commercial Line:</strong> (562) 616-0071 <br />
@@ -200,17 +200,12 @@ const ContactUsPage = ({ onZipCodeChange }) => {
 
 
 
-            <div className='line' style={{marginTop: '5%'}}> </div>
+            <div className='line' style={{ marginTop: '5%', marginBottom: '5%'}}> </div>
 
 
-            {/* <div style={{ textAlign: 'center' }}> */}
+                <h1 style={{ fontSize: '75px', color: '#3F5978', textAlign: 'center' }}> Get in Touch </h1>
 
-            <h1 style={{ fontSize: '60px', color: '#3F5978' }}> Get in Touch </h1>
-
-
-            <QuickEmailQuote />
-
-
+                <QuickEmailQuote />
 
         </div>
     );

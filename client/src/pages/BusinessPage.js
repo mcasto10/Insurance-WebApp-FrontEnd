@@ -33,7 +33,7 @@ export default function BusinessPage() {
 
                     <h1 style={{ fontSize: '50px', color: '#3F5978' }}>
                         Business Insurance </h1>
-                    <p style={{ lineHeight: '1.5', fontWeight: '300', fontSize: '18px' }}>
+                    <p style={{ lineHeight: '1.5', fontWeight: '300',color:'#3F5978', fontSize: '18px' }}>
 
                         Property damage or loss and legal
                         liability claims involving your
@@ -49,7 +49,7 @@ export default function BusinessPage() {
                     </p>
 
                     <div>
-                        <p> Choose your insurance type </p>
+                    <p className='PagesHeaderLayout'>  Choose your insurance type </p>
                         <select
                             id="insuranceType"
                             value={selectedOption}
@@ -67,7 +67,7 @@ export default function BusinessPage() {
                             <option value="CommericalAuto">Commerical Auto</option>
                         </select>
                         <div className="zipcodeButtonContainer">
-                            <p> Enter your ZipCode </p>
+                        <p className='PagesHeaderLayout'> Enter your ZipCode </p>
 
                             <ZipCode onZipCodeChange={handleZipCodeChange} />
                             <button style={{ backgroundColor: '#3F5978' }} onClick={handleBeginQoute}> Begin Quote </button>

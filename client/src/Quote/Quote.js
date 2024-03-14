@@ -131,7 +131,7 @@ const Quote = () => {
 
             {/* Places text in aligned in column */}
             <div className='right-column'>
-              <div> Choose your insurance type</div>
+              <p style = {{color: '#3F5978', fontSize: '18px'}}> Choose your insurance type </p>
               <select
                 id="insuranceType"
                 value={selectedOption}
@@ -148,9 +148,9 @@ const Quote = () => {
                 <option value="CommericalAuto">Commerical Auto</option>
               </select>
 
-              <div style={{ marginTop: '20px' }}>
+              <p style = {{color: '#3F5978', fontSize: '18px'}}> 
                 Please enter your zip code
-              </div>
+              </p>
 
               {/* Gives the zipcode textbox its features */}
               <div className="md-textbox-Qoute">

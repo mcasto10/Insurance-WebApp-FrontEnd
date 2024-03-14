@@ -23,7 +23,7 @@ export default function AutoRegistrationPage() {
             <div className='flexContainer'>
                 <div className='leftContent'>
                     <h1 style={{ fontSize: '60px', color: '#3F5978' }}> Auto Registrations Services Insurance </h1>
-                    <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '18px' }}>
+                    <p style={{ lineHeight: '2', fontWeight: '300', color:'#3F5978', fontSize: '18px' }}>
                         Effective, October 1st, 2006, if you allow your insurance to cancel or if the coverage is
                         interrupted for any reason, DMV will cancel your vehicle registration and suspend your
                         driver's license if you get into an accident without insurance. Keep your insurance in
@@ -47,14 +47,14 @@ export default function AutoRegistrationPage() {
                 <div className='flexContainer'>
                     <div className='leftContent'>
 
-                        <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '18px' }}>
+                        <p style={{ lineHeight: '2', fontWeight: '300', color:'#3F5978', fontSize: '18px' }}>
                             Don’t waste your time on long lines at the DMV. Get your stickers in Minutes!
                             We know your time is valuable, let us help you by giving you the best service.
                             We can always help you with and in our commitment of giving our customers the best
                             service, we provide you with:
 
 
-                            <div style={{ marginTop: "20px" }}>
+                            <div style={{ marginTop: "20px", color:'#3F5978',}}>
                                 <li>Vehicle Registrations</li>
                                 <li>Instant Renewals</li>
                                 <li>Title transfers</li>
@@ -67,7 +67,7 @@ export default function AutoRegistrationPage() {
 
                         <div className='flexContainer'>
                             {/* <div className='leftContent'> */}
-                                <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '18px' }}>
+                                <p style={{ lineHeight: '2', fontWeight: '300',  color:'#3F5978', fontSize: '18px' }}>
 
                                     To expedite the process of your renewals, please bring the following:
 
@@ -82,7 +82,7 @@ export default function AutoRegistrationPage() {
                             {/* </div> */}
 
                             {/* <div className='rightContent'> */}
-                                <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '18px' }}>
+                                <p style={{ lineHeight: '2', fontWeight: '300',  color:'#3F5978', fontSize: '18px' }}>
 
                                     For title transfers, please bring the following:
                                     <div style={{ marginTop: "20px" }}>

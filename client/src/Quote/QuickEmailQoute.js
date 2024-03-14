@@ -61,7 +61,7 @@ const QuickEmailQuote = () => {
         <textarea id="message" name="message" rows="5" onChange={handleChange}></textarea>
       </div>
 
-      <input type="submit" value="Send Message" style={{marginTop:'2%'}} className="button-like-input" />
+      <input type="submit" value="Send Message" style={{marginTop:'5%', marginBottom: '10%'}} className="button-like-input" />
 
     </form>
   );

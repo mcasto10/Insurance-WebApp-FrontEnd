@@ -7,7 +7,6 @@ import queryString from 'query-string';
 import eventBus from '../EventBus.js';
 
 
-
 function Login() {
   const [user, setUser] = useState({ name: "", email: "", accessToken: "", refreshToken: "" });
   const [isLoadingApp, setIsLoadingApp] = useState(true);
@@ -303,7 +302,7 @@ function Login() {
                     Make a Quote
                   </div>
                 </Link>
-                <Link to="/Quote?fromLogin=true">
+                <Link to="/Review?fromLogin=true">
                   <div className="make-event">
                     See all Reviews
                   </div>
@@ -320,9 +319,6 @@ function Login() {
                 </Link>
               </div>
 
-              {/* <div className="quick-action-dashboard"> */}
-              {/* <h3 className="underlined"> How to prepare for upcoming appointment </h3> */}
-              {/* </div> */}
             </div>
           </div>
 
@@ -372,7 +368,7 @@ function Login() {
 
       ) : (
         <div className="center-container">
-          <p className='signUpText'> Login To Your Account </p>
+         
           <div>
             <LoginForm Login={handleLogin} error={error} />
           </div>

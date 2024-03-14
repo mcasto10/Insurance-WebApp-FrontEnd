@@ -33,7 +33,7 @@ export default function CommericalAutoPage() {
 
 
                     <h1 style={{ fontSize: '50px', color: '#3F5978' }}> Commerical Auto Insurance </h1>
-                    <p style={{ lineHeight: '1.5', fontWeight: '300', fontSize: '18px' }}>
+                    <p style={{ lineHeight: '1.5', fontWeight: '300', color:'#3F5978',fontSize: '18px' }}>
                         Liability claims and damage or loss
                         of your commercial vehicle arising
                         from collision, theft or other accidents
@@ -47,7 +47,7 @@ export default function CommericalAutoPage() {
 
 
                     <div>
-                        <p> Choose your insurance type </p>
+                    <p className='PagesHeaderLayout'>  Choose your insurance type </p>
                         <select
                             id="insuranceType"
                             value={selectedOption}
@@ -65,7 +65,7 @@ export default function CommericalAutoPage() {
                             <option value="CommericalAuto">Commerical Auto</option>
                         </select>
                         <div className="zipcodeButtonContainer">
-                            <p> Enter your ZipCode </p>
+                        <p className='PagesHeaderLayout'> Enter your ZipCode </p>
 
                             <ZipCode onZipCodeChange={handleZipCodeChange} />
                             <button style={{ backgroundColor: '#3F5978' }} onClick={handleBeginQoute}> Begin Quote </button>

@@ -21,6 +21,7 @@ function LoginForm({ Login, error }) {
 
   return (
     <div className="login-card">
+       <div className='signUpText'> Log In </div>
       <form className="login-form" onSubmit={submitHandler}>
 
         {error && (
@@ -59,7 +60,7 @@ function LoginForm({ Login, error }) {
 
         <button className="control" type="submit"> Log In </button>
 
-        <a class="forgot-password" href="SendingEmailRestInfo">Forgot password?</a>
+        <a class="forgot-password" href="SendingEmailRestInfo"> Forgot password?</a>
 
         <div class="separator">
           <div class="line"></div>

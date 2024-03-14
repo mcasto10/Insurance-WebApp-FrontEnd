@@ -92,7 +92,7 @@ const GeneralUserInfo = () => {
 
         <div className="input-container">
 
-          <div>Best way to contact you:</div>
+          <div style = {{color: '#3F5978', fontSize: '18px'}}>Best way to contact you:</div>
 
           <select
             id="contact"

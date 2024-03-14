@@ -29,7 +29,7 @@ export default function MotorCyclePage() {
 
                 <div className='leftContent'>
                     <h1 style={{ fontSize: '50px', color: '#3F5978' }}>Motorcycle Insurance </h1>
-                    <p style={{ lineHeight: '1.5', fontWeight: '300', fontSize: '18px' }}>
+                    <p style={{ lineHeight: '1.5', fontWeight: '300', color:'#3F5978',fontSize: '18px' }}>
                         Whether it is a scooter, a moped
                         or a superbike, getting a specialized
                         motorcycle insurance is essential.
@@ -40,7 +40,7 @@ export default function MotorCyclePage() {
                         right for your need.
                     </p>
                     <div>
-                        <p> Choose your insurance type </p>
+                    <p className='PagesHeaderLayout'>  Choose your insurance type </p>
                         <select
                             id="insuranceType"
                             value={selectedOption}
@@ -57,7 +57,7 @@ export default function MotorCyclePage() {
                             <option value="CommericalAuto">Commerical Auto</option>
                         </select>
                         <div className="zipcodeButtonContainer">
-                            <p> Enter your ZipCode </p>
+                        <p className='PagesHeaderLayout'> Enter your ZipCode </p>
                             <ZipCode onZipCodeChange={handleZipCodeChange} />
                             <button style={{ backgroundColor: '#3F5978' }} onClick={handleBeginQoute}> Begin Quote </button>
                         </div>

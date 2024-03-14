@@ -79,7 +79,7 @@ const GeneralInsInfo = () => {
       {/* Auto, Home, Boat, Motorcycle, ClassicCar */}
       {(selections.Auto || selections.Homeowners || selections.Boat || selections.Motorcycle || selections.ClassicCar) && (
         <div className="input-container">
-          <div>Number of Years Insured:</div>
+          <label htmlFor="NumberOfYearsInsured">Number of Years Insured:</label>
           <input
 
             // There might be a issue with this code since the textbox doesn't work for it

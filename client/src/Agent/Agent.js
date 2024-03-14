@@ -323,10 +323,10 @@ const Agent = () => {
 
         </div>
 
-        <div className='right-content'>
+        <div className='agentRight-content'>
 
           {/* Page needs to be refreshed in order to be able to have the new wide image of the map */}
-          <MapContainer center={[latitudeDefault, longitudeDefault]} zoom={10} style={{ height: '650px', width: '100%' }}>
+          <MapContainer center={[latitudeDefault, longitudeDefault]} zoom={10} style={{ height: '850px', width: '100%' }}>
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution="Map data &copy; <a href='https://www.openstreetmap.org/'>OpenStreetMap</a> contributors"

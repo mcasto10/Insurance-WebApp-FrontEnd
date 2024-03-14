@@ -38,7 +38,7 @@ export default function AutoPage() {
         <div className='leftContent'>
 
           <h1 style={{ fontSize: '50px', color: '#3F5978' }}> Automobile Insurance </h1>
-          <p style={{ lineHeight: '1.5', fontWeight: '300', fontSize: '18px' }}>
+          <p style={{ lineHeight: '1.5', fontWeight: '300', color:'#3F5978', fontSize: '18px' }}>
             Car accidents can be emotionally and financially distressing.
             Secure yourself and your family by getting automobile insurance
             that can aptly compensate for any damage or loss brought to the
@@ -48,7 +48,7 @@ export default function AutoPage() {
           </p>
 
           <div>
-            <p> Choose your insurance type </p>
+          <p className='PagesHeaderLayout'> Choose your insurance type </p>
             <select
               id="insuranceType"
               value={selectedOption}
@@ -65,7 +65,7 @@ export default function AutoPage() {
               <option value="CommericalAuto">Commerical Auto</option>
             </select>
             <div className="zipcodeButtonContainer">
-              <p> Enter your ZipCode </p>
+            <p className='PagesHeaderLayout'> Enter your ZipCode </p>
 
               <ZipCode onZipCodeChange={handleZipCodeChange} />
               <button style={{ backgroundColor: '#3F5978' }} onClick={handleBeginQoute}> Begin Quote </button>

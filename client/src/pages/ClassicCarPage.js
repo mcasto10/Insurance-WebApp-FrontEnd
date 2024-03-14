@@ -30,7 +30,7 @@ export default function ClassicCarPage() {
                 <div className='leftContent'>
                     <h1 style={{ fontSize: '50px', color: '#3F5978' }}>
                         Classic Car Insurance </h1>
-                    <p style={{ lineHeight: '1.5', fontWeight: '300', fontSize: '18px' }}>
+                    <p style={{ lineHeight: '1.5', fontWeight: '300', color:'#3F5978',fontSize: '18px' }}>
                         Your priceless possession dßseserves
                         a specialized automobile insurance.
                         Let our agents help you shop for the
@@ -39,7 +39,7 @@ export default function ClassicCarPage() {
                         or loss, or liability claims.
                     </p>
                     <div>
-                        <p> Choose your insurance type </p>
+                    <p className='PagesHeaderLayout'> Choose your insurance type </p>
                         <select
                             id="insuranceType"
                             value={selectedOption}
@@ -57,7 +57,7 @@ export default function ClassicCarPage() {
                             <option value="CommericalAuto">Commerical Auto</option>
                         </select>
                         <div className="zipcodeButtonContainer">
-                            <p> Enter your ZipCode </p>
+                        <p className='PagesHeaderLayout'> Enter your ZipCode </p>
 
                             <ZipCode onZipCodeChange={handleZipCodeChange} />
                             <button style={{ backgroundColor: '#3F5978' }} onClick={handleBeginQoute}> Begin Quote </button>

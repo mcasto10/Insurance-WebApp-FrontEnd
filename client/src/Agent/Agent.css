@@ -69,11 +69,11 @@
 }
 
 
-.right-content {
+.agentRight-content {
   flex: 1;
   width: 200px;
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 90px;
   margin-right: 280px;
 }
 /*   
@@ -95,12 +95,12 @@ c
   .nice-table td {
     padding: 12px 20px;
     text-align: left;
+    color: #3f5978;
     border-bottom: 1px solid #ddd;
   }
   
   .nice-table th {
     background-color: #f2f2f2;
-    font-weight: bold;
   }
   
   .nice-table tbody tr:hover {
@@ -186,7 +186,7 @@ c
 }
 
 .zipCodeHeader {
-  font-size: 24px; 
+  font-size: 30px; 
   margin-bottom: 26px;  
   color: #3f5978;
    font-weight: bold;
@@ -198,7 +198,7 @@ c
     margin-left: 150px;
   }
 
-  .right-content {
+  .agentRight-content {
     margin-right: 150px;
   }
 
@@ -213,7 +213,7 @@ c
     margin-left: 50px;
   }
 
-  .right-content {
+  .agentRight-content {
     margin-right: 50px;
   }
 /* 
@@ -233,7 +233,7 @@ c
     margin-left: 10px;
   }
 
-  .right-content {
+  .agentRight-content {
     margin-right: 10px;
   }
 
@@ -251,7 +251,7 @@ c
   .red-box,
   .nice-table th,
   .zipCodeHeader,
-  .right-content {  
+  .agentRight-content {  
    display: none; 
   }
 

@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import arisLogo from '../assets/ARINSLOGO.png';
 import axios from "axios";
 import ProfileImg from '../assets/Profile.png';
-
+import menuBar from '../assets/MenuBar.png';
 import eventBus from '../EventBus';
 
 export default function Navbar() {
@@ -85,17 +85,19 @@ export default function Navbar() {
     <div>
       <div className="navBar-Header "> </div>
       <div className="nav">
+
         <div className="leftSide">
           <Link to="/" className="logo">
-            <img className='Logo' alt = 'LogoImg' src={arisLogo} />
+            <img className='Logo' alt='LogoImg' src={arisLogo} />
           </Link>
           <div className="dropdown">
-            <div className="dropbtn"> Insurance
+            <div className="dropbtn"> <div className='insuranceHeaderName'> Insurance </div>
+              <div className='menuBar'> <img src={menuBar} alt='menuBarImg' /></div>
               <i className="fa fa-caret-down"></i>
             </div>
             <div className="dropdown-content">
               <div className="header">
-                <p> Insurance </p> 
+                <p> Insurance </p>
               </div>
               <div className="row">
                 <div className="column">
@@ -119,7 +121,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <ul>
+          <ul className='leftHeaderContent'>
             {data.map((key, idx) => (
               <CustomLink to={key.name === 'Contact Us' ? 'ContactUsPage' : key.name}>{key.name}</CustomLink>
 

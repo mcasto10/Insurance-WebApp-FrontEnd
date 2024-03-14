@@ -33,7 +33,7 @@ export default function RvPage() {
 
                     <h1 style={{ fontSize: '50px', color: '#3F5978' }}>
                         RV INSURANCE </h1>
-                    <p style={{ lineHeight: '1.5', fontWeight: '300', fontSize: '18px' }}>
+                    <p style={{ lineHeight: '1.5', color:'#3F5978', fontWeight: '300', fontSize: '18px' }}>
 
                         Protect yourself and your
                         family while you’re on the
@@ -41,7 +41,7 @@ export default function RvPage() {
                         motor home insurance.
                     </p>
                     <div>
-                        <p> Choose your insurance type </p>
+                    <p className='PagesHeaderLayout'> Choose your insurance type </p>
                         <select
                             id="insuranceType"
                             value={selectedOption}
@@ -59,7 +59,7 @@ export default function RvPage() {
                             <option value="CommericalAuto">Commerical Auto</option>
                         </select>
                         <div className="zipcodeButtonContainer">
-                            <p> Enter your ZipCode </p>
+                        <p className='PagesHeaderLayout'> Enter your ZipCode </p>
 
                             <ZipCode onZipCodeChange={handleZipCodeChange} />
                             <button style={{ backgroundColor: '#3F5978' }} onClick={handleBeginQoute}> Begin Quote </button>

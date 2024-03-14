@@ -92,7 +92,10 @@ ul {
   background-size: 100% .1em;
 }
 
-/* Mega dropdown css */
+
+.menuBar {
+  display: none;
+}
 
 .dropdown {
   float: left;
@@ -106,12 +109,6 @@ ul {
   height: 100%;
   background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
   transition: 1s background-size;
-
-  
-
-  
-
-  
 }
 
 .dropdown .dropbtn:hover {
@@ -236,25 +233,24 @@ ul {
 
 /* Media Query for 0px to 787px screens */
 @media screen and (min-width: 0px) and (max-width: 787px) {
-  .nav .leftSide {
+
+  .insuranceHeaderName,
+  .Logo,
+  .leftHeaderContent {
     display: none;
   }
 
+  .dropdown .dropbtn:hover {
+    background-size: 0%;
+  }
+  
   .nav .rightside {
     display: none;
   }
-  
 
-   /* Display the menu three-bar icon */
-   .nav .dropdown .dropdown-btn {
-    width: 30px;
-    height: 30px; 
-    background: url('../assets/ThreeLines.png') center center no-repeat; 
-    background-size: contain;
-    cursor: pointer;
-  }
-
-  .nav .dropdown:hover .dropdown-content {
+  .menuBar {
     display: flex;
+    height: 25px;
+    width: 10px;
   }
 }

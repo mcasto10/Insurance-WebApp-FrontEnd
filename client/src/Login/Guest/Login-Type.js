@@ -72,7 +72,7 @@ const LoginGuest = () => {
             <h1 style={{ fontSize: '60px', display: 'flex', alignItems: 'center', color: '#3f5978', justifyContent: 'center' }}>
                 How would you like to proceed</h1>
             {/* <hr style={{ border: '1px solid #3f5978', width: '80%', margin: '20px auto' }} /> */}
-            <div className="line"> </div>
+            <div className='line' style={{ borderBottom: '1px solid #3f5978', width: '100%', margin: '10px 0' }}></div>
 
             <div style={{ display: 'flex', margin: 'auto', textAlign: 'center', justifyContent: 'space-around', color: '#3f5978' }}>
                 <div
@@ -132,7 +132,7 @@ const LoginGuest = () => {
                     <div className='line' style={{ borderBottom: '1px solid #3f5978', width: '100%', margin: '10px 0' }}></div>
 
                     <div style={{ marginBottom: '10px' }}>
-                        <img src={GuestStatus} alt="GuestStatus" style={{ maxWidth: '40%', height: 'auto' }} />
+                        <img src={GuestStatus} alt="GuestStatus" style={{  maxWidth: '73%', height: 'auto' }} />
                     </div>
                     <button
                         style={{ marginTop: '10px',  background: '#3F5978', border: '1px solid #3f5978', borderRadius: '5px', padding: '10px', width: '80%' }}

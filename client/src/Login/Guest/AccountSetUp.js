@@ -82,7 +82,10 @@ const AccountSetUp = () => {
 
   }
 
-  const handleNextClick = async () => {
+  const handleNextClick = async (e) => {
+    e.preventDefault(); 
+
+    
     if (fromAccountSetUp) {
       const guestInfo = await sendUserDataToServerAsGuest(userData);
       navigate(`/Agent/Appointment/ConfirmationPage?firstName=${userData.firstName}&middleName=${userData.middleName}&lastName=${userData.lastName}&phone=${userData.phone}&officenName=${officeName}&officeLocation=${officeLocation}&appointmentDate=${appointmentDate}&appointmentTime=${appointmentTime}&email=${userData.email}&zipCode=${userData.zipCode}&address=${userData.address}&city=${userData.city}&state=${userData.state}&message=${userData.message}&bestContact=${userData.bestContact}&guestId=${guestInfo}&fromAccountSetUp=true`);

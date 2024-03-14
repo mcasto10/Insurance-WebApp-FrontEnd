@@ -15,6 +15,6 @@
 
 /* Style the selected TimeToggleToken */
 .time-toggle-token.selected {
-  background-color: #007bff; /* Change to your desired selected background color */
+  background-color: #3F5978; /* Change to your desired selected background color */
   color: white; /* Change to your desired text color for selected */
 }
