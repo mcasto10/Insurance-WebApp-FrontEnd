@@ -82,7 +82,7 @@ const ConfirmationPage = () => {
     };
 
     try {
-      await axios.post('http://localhost:3001/appointmentEmail/sendEmailAppointment', params);
+      await axios.post('https://insurance-webapp-backend.onrender.com/appointmentEmail/sendEmailAppointment', params);
     } catch (error) {
       console.log(`Appointment Email erorr ${error}`);
     }
@@ -90,12 +90,12 @@ const ConfirmationPage = () => {
 
   const appointmentConfirmation = async () => {
     try {
-      await axios.post('http://localhost:3001/user/post-userAppointment', userData, {
+      await axios.post('https://insurance-webapp-backend.onrender.com/user/post-userAppointment', userData, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
-
+      
     } catch (error) {
       // Handle errors
       console.error(error);

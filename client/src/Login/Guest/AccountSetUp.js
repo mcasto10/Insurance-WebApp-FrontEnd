@@ -106,11 +106,12 @@ const AccountSetUp = () => {
 
   const sendUserDataToServerAsUser = async (userData) => {
     try {
-      const responseGuest = await axios.post(`http://localhost:3001/user/post-userInfo`, userData, {
+      const responseGuest = await axios.post(`https://insurance-webapp-backend.onrender.com/user/post-userInfo`, userData,
+      {
       });
 
       try {
-        await axios.post(`http://localhost:3001/user/combinedUserInfo`, { user: userID, userInfo: responseGuest.data.data._id }, {
+        await axios.post(`https://insurance-webapp-backend.onrender.com/user/combinedUserInfo`, { user: userID, userInfo: responseGuest.data.data._id }, {
         });
       } catch (error) {
         console.error(error);
@@ -128,7 +129,7 @@ const AccountSetUp = () => {
   const sendUserDataToServerAsGuest = async (userData) => {
 
     try {
-      const responseUserInfo = await axios.post(`http://localhost:3001/user/post-userInfo`, userData, {
+      const responseUserInfo = await axios.post(`https://insurance-webapp-backend.onrender.com/user/post-userInfo`, userData, {
       });
 
       // This is the case when both user information has been added
@@ -138,7 +139,7 @@ const AccountSetUp = () => {
       }
 
       try {
-        const response = await axios.post(`http://localhost:3001/user/combinedUserInfo`, userData, {
+        const response = await axios.post(`https://insurance-webapp-backend.onrender.com/user/combinedUserInfo`, userData, {
           headers: {
             'Content-Type': 'application/json',
           },

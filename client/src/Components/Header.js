@@ -15,11 +15,12 @@ export default function Navbar() {
     const checkAuthStatus = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/user/CheckAuthStatus`,
+          `https://insurance-webapp-backend.onrender.com/user/CheckAuthStatus`,
           {
             withCredentials: true,
           }
         );
+      
 
         if (response.status === 200) {
           setIsLoggedIn(true);
@@ -52,12 +53,13 @@ export default function Navbar() {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:3001/user/SignOut`,
+        `https://insurance-webapp-backend.onrender.com/user/SignOut`,
         {},
         {
           withCredentials: true,
         }
       );
+    
 
       if (response.status === 200) {
         eventBus.emit('userLoggedOut');

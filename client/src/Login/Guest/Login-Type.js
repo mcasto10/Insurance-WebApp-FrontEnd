@@ -2,15 +2,9 @@ import React from 'react';
 import queryString from 'query-string';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-
 import GuestStatus from '../../assets/GuestStatus.png';
 
-
-// import CreateNewAccount from '../../assets/CreateNewAccount.png';
-
-
 import SignInStatus from '../../assets/SignInStatus.png';
-
 
 const LoginGuest = () => {
     const navigate = useNavigate();

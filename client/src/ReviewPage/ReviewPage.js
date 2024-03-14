@@ -32,11 +32,12 @@ const ReviewPage = () => {
 
   const fetchReviews = async () => {
     try {
-      const responseAllUserReview = await axios.get('http://localhost:3001/user/getAllUserComments', {
+      const responseAllUserReview = await axios.get('https://insurance-webapp-backend.onrender.com/user/getAllUserComments', {
         params: {
           selectedLocations: selectedLocations.join(',')
         }
       });
+    
 
       if (responseAllUserReview.status === 200) {
         const data = responseAllUserReview.data;
@@ -59,7 +60,7 @@ const ReviewPage = () => {
 
   const handleRestrictionButton = async (event) => {
     event.preventDefault();
-    await fetchReviews(); // Call the fetchReviews function here
+    await fetchReviews(); 
   };
 
   const handleCheckboxChange = (e) => {

@@ -81,10 +81,10 @@ const EmailVerification = () => {
     const otp = inputs.join('');
 
     try {
-      const otpResponse = await axios.post('http://localhost:3001/otp/verify', {
+      const otpResponse = await axios.post('https://insurance-webapp-backend.onrender.com/otp/verify', {
         email: email,
         otp: otp,
-      });
+    });
 
       if (otpResponse.data.valid === true) {
 
@@ -123,7 +123,7 @@ const EmailVerification = () => {
 
   const sendOTPAgain = async () => {
     try {
-      await axios.post('http://localhost:3001/user/RestPasswordOTP', { email });
+      await axios.post('https://insurance-webapp-backend.onrender.com/user/RestPasswordOTP', { email });
   
       // Update remaining time and start the cooldown
       setRemainingTime(60);

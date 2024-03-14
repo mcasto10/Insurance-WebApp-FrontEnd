@@ -38,9 +38,10 @@ function SignUp() {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/user/CheckAuthStatus', {
+        const response = await axios.get('https://insurance-webapp-backend.onrender.com/user/CheckAuthStatus', {
           withCredentials: true,
         });
+      
 
         if (response.status === 200) {
           // const userData = response.data;
@@ -65,7 +66,7 @@ function SignUp() {
       };
 
       // responseUserData: id of user
-      const responseUserData = await axios.post(`http://localhost:3001/user/SignUp`, userData);
+      const responseUserData = await axios.post(`https://insurance-webapp-backend.onrender.com/user/SignUp`, userData);
 
       // Creating a default for Combio when a user only creats a userAccount but hasn't included userinfo
       if (fromConfirmationPage) {
@@ -90,9 +91,8 @@ function SignUp() {
     }
 
     try {
-      const combioUserId = await axios.post(`http://localhost:3001/user/combinedUserInfo`, UserIdContent, {
-      });
-
+      const combioUserId = await axios.post(`https://insurance-webapp-backend.onrender.com/user/combinedUserInfo`, UserIdContent);
+    
       return combioUserId;
 
     } catch (error) {

@@ -30,7 +30,8 @@ const MakeReviewPage = ({ value, onRatingChange }) => {
     }
 
     try {
-      await axios.post('http://localhost:3001/user/userComment', userCommentInfo);
+      await axios.post('https://insurance-webapp-backend.onrender.com/user/userComment', userCommentInfo);
+
     } catch (error) {
       console.log(`Error logging the user's posted Review ${error}`);
     }

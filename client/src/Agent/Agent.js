@@ -152,7 +152,7 @@ const Agent = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post(`http://localhost:3001/apiController/zipcode/${inputValue}`);
+      const response = await axios.post(`https://insurance-webapp-backend.onrender.com/apiController/zipcode/${inputValue}`);
       const ZipCodeInfo = response.data;
     
 

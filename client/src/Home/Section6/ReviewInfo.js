@@ -12,17 +12,17 @@ export default function ReviewInfo() {
 
   const handleReviewClick = async () => {
     try {
-      const responseUserInfo = await axios.get('http://localhost:3001/user/CheckAuthStatus', {
+      const responseUserInfo = await axios.get('https://insurance-webapp-backend.onrender.com/user/CheckAuthStatus', {
         withCredentials: true,
       });
-
+    
 
       if (responseUserInfo.status === 200) {
         try {
-          const responseUser = await axios.get(`http://localhost:3001/user/GetUserInformation?userId=${responseUserInfo.data.user.userId}`, {
+          const responseUser = await axios.get(`https://insurance-webapp-backend.onrender.com/user/GetUserInformation?userId=${responseUserInfo.data.user.userId}`, {
             withCredentials: true,
           });
-
+        
 
           // Check if the response data contains user information
           if (responseUser.data) {

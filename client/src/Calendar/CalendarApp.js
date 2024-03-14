@@ -108,17 +108,18 @@ const handleNextDay = () => {
     const appointmentTime = timeConvertion(Object.values(selectedTimes)[0]);
 
     try {
-      const response = await axios.get('http://localhost:3001/user/CheckAuthStatus', {
+      const response = await axios.get('https://insurance-webapp-backend.onrender.com/user/CheckAuthStatus', {
         withCredentials: true,
       });
-
+      
       // Log the user ID sent back
       if (response.status === 200) {
         try {
           
-          const responseUser = await axios.get(`http://localhost:3001/user/GetUserInformation?userId=${response.data.user.userId}`, {
+          const responseUser = await axios.get(`https://insurance-webapp-backend.onrender.com/user/GetUserInformation?userId=${response.data.user.userId}`, {
             withCredentials: true,
           });
+          
 
           // Check if the response data contains user information
           if (responseUser.data) {

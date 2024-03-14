@@ -38,9 +38,10 @@ function Login() {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const responseCheckAuth = await axios.get('http://localhost:3001/user/CheckAuthStatus', {
+        const responseCheckAuth = await axios.get('https://insurance-webapp-backend.onrender.com/user/CheckAuthStatus', {
           withCredentials: true,
         });
+        
 
         if (responseCheckAuth.status === 200) {
           const userData = responseCheckAuth.data;
@@ -54,10 +55,9 @@ function Login() {
           setLoading(true);
 
           try {
-            const responseUser = await axios.get(`http://localhost:3001/user/GetUserInformation?userId=${responseCheckAuth.data.user.userId}`, {
+            const responseUser = await axios.get(`https://insurance-webapp-backend.onrender.com/user/GetUserInformation?userId=${responseCheckAuth.data.user.userId}`, {
               withCredentials: true,
             });
-
 
             // Check if the response data contains user information
             if (responseUser.data) {
@@ -71,10 +71,10 @@ function Login() {
           }
 
           try {
-            const responseUserAppointment = await axios.post('http://localhost:3001/user/checkUserAppointment', responseCheckAuth.data.user.userId, {
+            const responseUserAppointment = await axios.post('https://insurance-webapp-backend.onrender.com/user/checkUserAppointment', responseCheckAuth.data.user.userId, {
               withCredentials: true,
             });
-
+          
 
             setUserAppointment(responseUserAppointment.data[0]);
 
@@ -108,10 +108,10 @@ function Login() {
         password: details.password,
       };
 
-      const responseSignIn = await axios.post('http://localhost:3001/user/SignIn', userData, {
+      const responseSignIn = await axios.post('https://insurance-webapp-backend.onrender.com/user/SignIn', userData, {
         withCredentials: true,
       });
-
+      
 
 
       if (responseSignIn.status === 200) {
@@ -124,9 +124,8 @@ function Login() {
         // Setting user and userinfo
         if (fromAccountSetUp) {
           try {
-
-            await axios.post(`http://localhost:3001/user/combinedUserInfo`, { someUserId: responseSignIn.userId, someBaseUserId: guestId }, {
-            });
+            await axios.post(`https://insurance-webapp-backend.onrender.com/user/combinedUserInfo`, { someUserId: responseSignIn.userId, someBaseUserId: guestId });
+          
           } catch (error) {
             console.error(error);
           }
@@ -149,9 +148,10 @@ function Login() {
 
 
           try {
-            const responseUserAppointment = await axios.post('http://localhost:3001/user/checkUserAppointment', responseSignIn.data.userId, {
+            const responseUserAppointment = await axios.post('https://insurance-webapp-backend.onrender.com/user/checkUserAppointment', responseSignIn.data.userId, {
               withCredentials: true,
             });
+          
 
 
             setUserAppointment(responseUserAppointment.data[0]);
@@ -185,9 +185,10 @@ function Login() {
 
   const getUserInfo = async (userId) => {
     try {
-      const responseUser = await axios.get(`http://localhost:3001/user/GetUserInformation?userId=${userId}`, {
+      const responseUser = await axios.get(`https://insurance-webapp-backend.onrender.com/user/GetUserInformation?userId=${userId}`, {
         withCredentials: true,
       });
+    
 
       if (responseUser.data) {
         const {
@@ -229,7 +230,7 @@ function Login() {
 
     if (isConfirmed) {
       try {
-        await axios.get(`http://localhost:3001/appointment/deleteAppointment`);
+        await axios.get(`https://insurance-webapp-backend.onrender.com/appointment/deleteAppointment`);
       } catch (error) {
         console.error(`Error retrieving user information: ${error.message}`);
       }

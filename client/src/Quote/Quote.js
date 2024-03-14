@@ -88,7 +88,8 @@ const Quote = () => {
 
   const handleUserQuote = async () => {
     try {
-      await axios.post('http://localhost:3001/user/sendEmailQuote', { userInfo });
+      await axios.post('https://insurance-webapp-backend.onrender.com/user/sendEmailQuote', { userInfo });
+
     } catch (error) {
       console.error('Error submitting user info:', error);
     }
@@ -98,7 +99,7 @@ const Quote = () => {
 
     try {
 
-      await axios.post('http://localhost:3001/user/submitUserInfo', { userInfo });
+      await axios.post('https://insurance-webapp-backend.onrender.com/user/submitUserInfo', { userInfo });
     } catch (error) {
       console.error('Error submitting user info:', error);
     }

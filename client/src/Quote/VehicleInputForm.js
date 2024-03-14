@@ -99,21 +99,18 @@ const VehicleInputForm = () => {
                                 type="text"
                                 value={userInfo.vehiclesInfo[index] && userInfo.vehiclesInfo[index]?.year || ''}
                                 onChange={(e) => handleInputChange(index, 'year', e.target.value)}
-                            // placeholder="Year"
                             />
 
                         </div>
 
                         <div className="input-container">
                             <label> Vehicle Type </label>
-                            <select
+
+                            <input
+                                type="text"
                                 value={userInfo.vehiclesInfo[index] && userInfo.vehiclesInfo[index]?.make || ''}
                                 onChange={(e) => handleInputChange(index, 'make', e.target.value)}
-                                className='typeSelect'
-                            >
-                                <option value="Toyota">Toyota</option>
-                                <option value="Honda">Honda</option>
-                            </select>
+                            />
 
                         </div>
                     </div>
@@ -127,7 +124,6 @@ const VehicleInputForm = () => {
                                 type="text"
                                 value={userInfo.vehiclesInfo[index] && userInfo.vehiclesInfo[index]?.value || ''}
                                 onChange={(e) => handleInputChange(index, 'value', e.target.value)}
-                            // placeholder="Value"
                             />
 
                         </div>
@@ -140,7 +136,6 @@ const VehicleInputForm = () => {
                                 type="text"
                                 value={userInfo.vehiclesInfo[index] && userInfo.vehiclesInfo[index]?.model || ''}
                                 onChange={(e) => handleInputChange(index, 'model', e.target.value)}
-                            // placeholder="Model"
                             />
 
                         </div>
@@ -173,7 +168,6 @@ const VehicleInputForm = () => {
                                 type="text"
                                 value={userInfo.vehiclesInfo[index] && userInfo.vehiclesInfo[index]?.purchasedPrice || ''}
                                 onChange={(e) => handleInputChange(index, 'purchasedPrice', e.target.value)}
-                            // placeholder="Purchased Price"
                             />
 
                         </div>
@@ -191,7 +185,6 @@ const VehicleInputForm = () => {
                                         type="text"
                                         value={(selections.Boat ? userInfo.vehiclesInfo[index]?.identificationNumber || '' : '')}
                                         onChange={(e) => handleInputChange(index, 'identificationNumber', e.target.value)}
-                                    // placeholder="Identification Number"
                                     />
 
                                 </div>
@@ -204,7 +197,6 @@ const VehicleInputForm = () => {
                                         value={(selections.Boat ? userInfo.vehiclesInfo[index]?.annualMileage || '' : '')}
                                         onChange={(e) => handleInputChange(index, 'annualMileage', e.target.value)}
 
-                                    // placeholder="Annual Mileage"
                                     />
                                 </div>
                             </div>
@@ -219,7 +211,6 @@ const VehicleInputForm = () => {
                                         type="text"
                                         value={(selections.Boat ? userInfo.vehiclesInfo[index]?.customParts || '' : '')}
                                         onChange={(e) => handleInputChange(index, 'customParts', e.target.value)}
-                                    // placeholder="Custom Parts or Equipment"
                                     />
                                 </div>
 
@@ -234,7 +225,6 @@ const VehicleInputForm = () => {
                                         type="text"
                                         value={(selections.Boat ? userInfo.vehiclesInfo[index]?.engines[0]?.year || '' : '')}
                                         onChange={(e) => handleInputChange(index, 'boat.engines[0].year', e.target.value)}
-                                    // placeholder="Year of Engine One"
                                     />
 
                                 </div>
@@ -252,7 +242,6 @@ const VehicleInputForm = () => {
                                         type="text"
                                         value={(selections.Boat ? userInfo.vehiclesInfo[index]?.purchasePrice || '' : '')}
                                         onChange={(e) => handleInputChange(index, 'boat.purchasePrice', e.target.value)}
-                                    // placeholder="Boat - Purchase Price"
                                     />
 
                                 </div>
@@ -264,7 +253,6 @@ const VehicleInputForm = () => {
                                         type="text"
                                         value={(selections.Boat ? userInfo.vehiclesInfo[index]?.engines[0]?.engineSize || '' : '')}
                                         onChange={(e) => handleInputChange(index, 'boat.engines[0].engineSize', e.target.value)}
-                                    // placeholder="Engine Size (Horsepower)"
                                     />
 
                                 </div>

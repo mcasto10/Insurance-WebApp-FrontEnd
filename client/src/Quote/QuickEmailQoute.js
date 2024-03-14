@@ -22,9 +22,9 @@ const QuickEmailQuote = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3001/user/quickEmailQuote', formData);
-
-    } catch (error) {
+      await axios.post('https://insurance-webapp-backend.onrender.com/user/quickEmailQuote', formData);
+    }
+     catch (error) {
       console.error('Error sending data:', error);
     }
   };

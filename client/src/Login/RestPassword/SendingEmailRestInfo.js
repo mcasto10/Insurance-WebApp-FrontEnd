@@ -17,12 +17,12 @@ function SendingEmailRestInfo({ Login, error }) {
       
         try {
           // Make the request with the email
-          const responseRestPassword = await axios.post('http://localhost:3001/user/resetPasswordOTP', { email });
+          const responseResetPassword = await axios.post('https://insurance-webapp-backend.onrender.com/user/resetPasswordOTP', { email });
       
-          if (responseRestPassword.status === 200) {
-            navigate(`/SignUp/EmailVerification?routeNav=SendingEmailRestInfo&email=${email}&userID=${responseRestPassword.data.userID}`);
+          if (responseResetPassword.status === 200) {
+            navigate(`/SignUp/EmailVerification?routeNav=SendingEmailRestInfo&email=${email}&userID=${responseResetPassword.data.userID}`);
           } else {
-            setErrorMessage(responseRestPassword.data.message || 'Unexpected error happened.');
+            setErrorMessage(responseResetPassword.data.message || 'Unexpected error happened.');
           }
         } catch (error) {
           // Handle error
