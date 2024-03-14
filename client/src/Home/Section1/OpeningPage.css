@@ -16,6 +16,14 @@
     margin-top: 40px;
 }
 
+.beginQouteButton {
+    background-color: #3F5978;
+}
+
+.beginQouteButton:hover {
+    background-color: #4a6a91;
+}
+
 .headerContainer {
     width: 100%;
     padding: 0;
@@ -95,7 +103,7 @@
     }
 }
 
-@media screen and (min-width: 1403px) and (max-width: 1504px){
+@media screen and (min-width: 1403px) and (max-width: 1504px) {
     .section1 {
         margin-left: 250px;
         margin-right: 250px;
@@ -121,6 +129,7 @@
     .headerContainer {
         width: 60%;
     }
+
     .headerContainer p.openingText {
         margin-left: 200px;
         margin-right: 200px;
@@ -141,6 +150,7 @@
     .headerContainer {
         width: 65%;
     }
+
     .headerContainer p.openingText {
         margin-left: 150px;
         margin-right: 150px;
@@ -186,7 +196,8 @@
     }
 
     .headerContainer p.openingText {
-        font-size: 50px; /* Adjusted font size for smaller screens */
+        font-size: 50px;
+        /* Adjusted font size for smaller screens */
         margin-left: 50px;
         margin-right: 50px;
     }
@@ -210,12 +221,13 @@
     }
 
     .headerContainer p.openingText {
-        font-size: 50px; /* Adjusted font size for smaller screens */
+        font-size: 50px;
+        /* Adjusted font size for smaller screens */
         margin-left: 15px;
         margin-right: 0px;
     }
 
     .homeImage {
-        display: none;    
+        display: none;
     }
 }

@@ -209,12 +209,7 @@ const ReviewPage = () => {
               <p style={{ fontSize: '18px' }}> San Pedro, CA 90731 </p>
             </div>
 
-            <button onClick={handleRestrictionButton} style={{
-              width: '35%',
-              padding: '8px',
-              marginTop: '10px',
-              background: '#3F5978'
-            }}> Apply </button>
+            <button onClick={handleRestrictionButton} className='applyReviewButton'> Apply </button>
 
 
           </div>
@@ -229,7 +224,7 @@ const ReviewPage = () => {
         </div>
 
         {showLoadMoreButton && (
-          <button style={{ background: '#3F5978', marginTop: '40px', marginBottom: '40px' }} onClick={handleLoadMoreClick}>Load More Comments</button>
+          <button className = "loadMoreButton" onClick={handleLoadMoreClick}>Load More Comments</button>
         )}
       </div>
     </form>

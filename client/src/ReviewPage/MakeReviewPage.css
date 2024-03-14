@@ -51,7 +51,7 @@
 button {
   padding: 10px 20px;
   font-size: 14px;
-  background-color: #007bff;
+  background-color: #3F5978;
   color: white;
   border: none;
   border-radius: 4px;
@@ -60,5 +60,26 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #4a6a91;
+}
+
+
+.loadMoreButton {
+  background-color: #3F5978; margin-top: 40px; margin-bottom: 40px;
+}
+
+.loadMoreButton:hover {
+  background-color: #4a6a91;
+}
+
+.applyReviewButton {
+    width: 35%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #3F5978;
+}
+
+
+.applyReviewButton:hover{
+  background-color: #4a6a91;
 }

@@ -52,11 +52,18 @@ export default function AutoRegistration() {
           </h1>
         </div>
         {/* Insurance cards */}
-        <div className="insurance-container">
-          {InsuranceInfo.map((type, index) => (
-            <InsuranceCards key={index} title={type.title} image={type.image} onClick={handleLearnMoreAuto} />
-          ))}
-        </div>
+        <div className="insurance-container" style={{ cursor: 'pointer' }}>
+  {InsuranceInfo.map((type, index) => (
+    <InsuranceCards
+      key={index}
+      title={type.title}
+      image={type.image}
+      onClick={handleLearnMoreAuto}
+      style={{ transition: 'transform 0.3s' }} // Apply transition to each individual image
+    />
+  ))}
+</div>
+
       </div>
 
     )

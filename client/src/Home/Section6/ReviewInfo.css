@@ -28,6 +28,19 @@
   font-size: 25px;
 }
 
+.SeeAllComments,
+.MakeReview {
+  background-color: #3F5978;
+}
+.MakeReview {
+  margin-left: 5px;
+}
+
+.SeeAllComments:hover,
+.MakeReview:hover {
+  background-color: #4a6a91;
+}
+
 
 .table-row {
   display: flex;

@@ -62,10 +62,10 @@ export default function ReviewInfo() {
 
           <div className="see-more">
             <Link to="/Review">
-              <button className = "SeeAllComments" style={{ background: '#3A6B9E' }}> See all Reviews </button>
+              <button className = "SeeAllComments"> See all Reviews </button>
             </Link>
 
-            <button  className = "MakeReview" style={{ background: '#3A6B9E', marginLeft: '5px' }} onClick={handleReviewClick}>Make a Review</button>
+            <button className = "MakeReview" onClick={handleReviewClick}>Make a Review</button>
           </div>
 
 

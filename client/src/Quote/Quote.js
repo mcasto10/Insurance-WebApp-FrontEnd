@@ -93,6 +93,7 @@ const Quote = () => {
     } catch (error) {
       console.error('Error submitting user info:', error);
     }
+    
   };
 
   const handleLastSubmission = async () => {
@@ -409,7 +410,7 @@ const Quote = () => {
               </button>
 
 
-              <div> To Get A Price </div>
+              <div style={{fontWeight: 'bold', fontSize: '25px'}}> To Get A Price </div>
               <button type="button" className="button-QuotePage" onClick={handleUserQuote}>
                 Contact Agent </button>
 

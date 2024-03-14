@@ -203,8 +203,8 @@ const Agent = () => {
                 transition: 'background-color 0.3s, color 0.3s, font-size 0.3s',  // Add transition for a smooth effect
                 cursor: 'pointer',
               }}
-                onMouseOver={(e) => e.target.style.backgroundColor = '#2a3b4e'}  // Change background color on hover
-                onMouseOut={(e) => e.target.style.backgroundColor = '#3f5978'}   // Change background color back on mouse out
+                onMouseOver={(e) => e.target.style.backgroundColor = '#4a6a91'}  // Change background color on hover
+                onMouseOut={(e) => e.target.style.backgroundColor = '#3F5978'}   // Change background color back on mouse out
               > Submit</button>
             </div>
           </form>

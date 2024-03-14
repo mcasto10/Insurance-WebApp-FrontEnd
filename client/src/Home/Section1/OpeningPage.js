@@ -53,7 +53,7 @@ export default function OpeningPage() {
                 <div className="zipcodeButtonContainer">
 
                     <ZipCode onZipCodeChange={handleZipCodeChange} />
-                    <button style={{ backgroundColor: '#3F5978' }} onClick={handleBeginQoute}> Begin Quote </button>
+                    <button onClick={handleBeginQoute}> Begin Quote </button>
                 </div>
 
                 <div className="quote-box-section1">

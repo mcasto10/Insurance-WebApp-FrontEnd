@@ -44,12 +44,17 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .insurance-card:hover img {
+    transform: scale(1.1);
+  }
   
   .insurance-card {
     width: 600px;
     border-radius: 5px;
     overflow: hidden;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    cursor: pointer;
+    transition: transform 0.3s;
   }
   
   .insurance-card img {
