@@ -31,12 +31,12 @@ import RvPage from './pages/RvPage';
 import RestPassword from './Login/RestPassword/RestingPassword';
 import SendingEmailRestInfo from './Login/RestPassword/SendingEmailRestInfo';
 
-import ConfirmationQoutePage from './Quote/ConfirmationQoutePage.js';
+import ConfirmationQoutePage from './Quote/ConfirmationQoutePage';
 
 
 import ContactUsPage from './pages/ContactUsPage';
 
-
+import MessageDelivered from './Quote/MessageDelivered';
 
 /* rfce */
 
@@ -77,6 +77,7 @@ function App() {
           <Route path="/RestPassword" element={<RestPassword />} />
           <Route path="/SendingEmailRestInfo" element={<SendingEmailRestInfo />} />
           <Route path="/ConfirmationQoutePage" element={<ConfirmationQoutePage />} />
+          <Route path="/MessageDelivered" element={<MessageDelivered />} />
 
 
 

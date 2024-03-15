@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {  useNavigate } from 'react-router-dom';
+
 import axios from "axios";
 
 const QuickEmailQuote = () => {
@@ -18,11 +20,16 @@ const QuickEmailQuote = () => {
     }));
   };
 
+  const navigate = useNavigate();
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await axios.post('https://insurance-webapp-backend.onrender.com/user/quickEmailQuote', formData);
+      navigate('/MessageDelivered');
+      
     }
      catch (error) {
       console.error('Error sending data:', error);
