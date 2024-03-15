@@ -57,7 +57,6 @@ const AccountSetUp = () => {
         const maxLength = 10;
         newValue = numericRegex.test(value) ? value.slice(0, maxLength) : userData[name] || '';
         break;
-      case 'email':
       case 'address':
       case 'city':
         // Allow characters and numbers for email, address, and city
@@ -67,6 +66,9 @@ const AccountSetUp = () => {
         // Allow only numeric characters for zip code
         newValue = numericRegex.test(value) ? value : userData[name] || '';
         break;
+        case 'email':
+          newValue = value;
+          break;
       default:
         // For other fields, use the existing logic
         newValue = value;

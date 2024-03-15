@@ -17,7 +17,6 @@ const LoginGuest = () => {
 
     const ReviewPage = queryParams.routeFrom === 'ReviewPage'; // Ensure comparison is strict
 
-
     const officeName = queryParams.officeName;
     const officeLocation = queryParams.officeLocation;
     const appointmentDate = queryParams.appointmentDate;
