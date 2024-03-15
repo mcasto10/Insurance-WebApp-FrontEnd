@@ -177,6 +177,7 @@ const VehicleInputForm = () => {
                                 onChange={(e) => handleInputChange(index, 'usage', e.target.value)}
                                 className="biggerSelectOption"
                             >
+                                 <option value="">Select a option</option>
                                 <option value="commute">Commute</option>
                                 <option value="pleasure">Pleasure</option>
                                 <option value="business">Business</option>
@@ -274,6 +275,7 @@ const VehicleInputForm = () => {
                                     className="biggerSelectOption"
                                     onChange={(e) => handleInputChange(index, 'radiusOfDriving', e.target.value)}
                                 >
+                                    <option value="">Select a option</option>
                                     <option value="0-50">0-50 miles</option>
                                     <option value="50-100">50-100 miles</option>
                                     <option value="100-200">100-200 miles</option>

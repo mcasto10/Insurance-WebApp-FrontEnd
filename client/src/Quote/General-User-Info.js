@@ -104,6 +104,7 @@ const GeneralUserInfo = () => {
 
             required
           >
+            <option value=""> Select a option </option>
             <option value="Phone">Phone</option>
             <option value="Email">Email</option>
             <option value="Fax">Fax</option>
