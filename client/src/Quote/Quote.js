@@ -117,6 +117,7 @@ const Quote = () => {
   return (
     // Setting left and right margins
     <form className="quote-Position" onSubmit={handleSubmit}>
+      
       {/* Elements for pages after 0 */}
       {(currentPage > 0) && (
         <div style={{ marginTop: '80px' }}>

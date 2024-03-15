@@ -43,7 +43,7 @@ function RestPassword({ Login, error }) {
         e.preventDefault();
 
         try {
-            await axios.post('https://insurance-webapp-backend.onrender.com/forgot_password/reset', requestData);
+            await axios.post('https://insurance-webapp-backend.onrender.com/user/reset', requestData);
 
             // navigate to the EmailVerification page
             navigate('/Login');
