@@ -167,10 +167,9 @@ export default function Navbar() {
 
 function CustomLink({ to, children, ...props }) {
   const location = useLocation();
-  const path = location.pathname;
 
   return (
-    <li className={path === to ? 'active' : ''}>
+    <li className={location.pathname === `/${to}` ? 'active' : ''}>
       <Link to={to} {...props}>
         {children}
       </Link>
