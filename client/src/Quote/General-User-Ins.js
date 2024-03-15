@@ -120,11 +120,11 @@ const GeneralInsInfo = () => {
             id="numClaim"
             name="numClaim"
             value={userInfo.userInsurance.numClaim || ''}
-
-            // value={userInfo.ClassicCar && userInfo.ClassicCar.userInsurance.numClaim || ''}
             onChange={handleChange}
+            className="biggerSelectOption"
+            style={{marginBottom: '10px'}}
           >
-            <option value="">Select a choose</option>
+            <option value="">Select a choose </option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>

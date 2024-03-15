@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './PageLayout.css';
 import ContactUsImage from '../assets/InsuranceCoverImg.png';
 
-import addOffice from '../assets/Additional-Office.png';
 import saintPedro from '../assets/SaintPedro-Office.png';
 import paremont from '../assets/Paremont-Office.png';
 import haberCity from '../assets/HaberCity-Office.png';
@@ -50,7 +49,7 @@ const ContactUsPage = ({ onZipCodeChange }) => {
                     <h1 style={{ fontSize: '75px', color: '#3F5978', marginTop: '10%' }}>  Contact Us </h1>
                     <p style={{ lineHeight: '1.5', fontWeight: '300', color: '#3F5978', fontSize: '22px' }}>
                         When it comes to protecting the things that are important to us, getting the right insurance protection is essential </p>
-                    <p style={{ fontWeight: '300',  color: '#3F5978', fontWeight: 'bold', fontSize: '20px' }}> Get a quick quote now. </p>
+                        <p style={{ color: '#3F5978', fontWeight: '300 bold', fontSize: '20px' }}>Get a quick quote now.</p>
 
 
                     <div>
@@ -105,7 +104,7 @@ const ContactUsPage = ({ onZipCodeChange }) => {
             <h1 style={{ fontSize: '75px', color: '#3F5978' }}> Office Location </h1>
 
 
-            <div>    <p style={{ lineHeight: '2', fontWeight: '300', fontSize: '22px', fontWeight: 'bold', color: '#3F5978' }}>  Make a Appointment </p>
+            <div>    <p style={{ lineHeight: '2',  fontWeight: '300 bold', fontSize: '22px', color: '#3F5978' }}>  Make a Appointment </p>
 
 
                 <div

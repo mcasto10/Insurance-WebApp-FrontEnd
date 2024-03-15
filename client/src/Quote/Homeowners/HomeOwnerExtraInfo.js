@@ -10,8 +10,8 @@ const HomeOwnerExtraInfo = () => {
 
         setUserInfo(prevState => ({
             ...prevState,
-            homeOwnerExtra: {
-                ...prevState.coverageRequest,
+            userInsurance: {
+                ...prevState.userInsurance,
                 [name]: value
             }
         }));
@@ -20,6 +20,9 @@ const HomeOwnerExtraInfo = () => {
 
     return (
         <div>
+
+            <h2 style={{ borderBottom: '2px solid #ccc', paddingBottom: '5px', fontSize: '50px', color: '#3F5978' }}> Additional homeowners insurance information </h2>
+
             <div className="input-row">
 
                 <div className="input-container">

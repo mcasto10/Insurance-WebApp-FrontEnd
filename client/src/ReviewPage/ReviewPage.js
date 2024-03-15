@@ -78,7 +78,6 @@ const ReviewPage = () => {
 
     let hours = newDateFormat.getHours();
     const minutes = newDateFormat.getMinutes();
-    const seconds = newDateFormat.getSeconds();
     const amOrPm = hours >= 12 ? 'PM' : 'AM';
 
     // Convert 24-hour format to 12-hour format if needed

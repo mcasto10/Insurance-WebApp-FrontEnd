@@ -6,7 +6,7 @@ import DriverInputForm from './DriverInputForm.js';
 import axios from 'axios';
 import queryString from 'query-string';
 
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import QuickEmailQuote from './QuickEmailQoute.js';
 
@@ -49,11 +49,14 @@ import { useFormContext } from './FormProvider';
 
 const Quote = () => {
 
+
+  const navigate = useNavigate();
   const location = useLocation();
   const queryParams = queryString.parse(location.search);
   const InsuranceType = queryParams.InsuranceType;
   const zipCode = queryParams.zipCode;
   const goToStep = queryParams.goToStep;
+  
 
   const {
     currentStep,
@@ -90,7 +93,9 @@ const Quote = () => {
     try {
       await axios.post('https://insurance-webapp-backend.onrender.com/user/sendEmailQuote', { userInfo });
 
-    } catch (error) {
+
+      navigate(`/ConfirmationQoutePage`);
+        } catch (error) {
       console.error('Error submitting user info:', error);
     }
     
@@ -260,10 +265,9 @@ const Quote = () => {
       )}
 
       {/* Auto, Boat, ClassicCar, MotorCycle, RV */}
-      {currentPage === 5 && (selections.Auto || selections.Boat || selections.ClassicCar || selections.MotorCycle || selections.RV || selections.CommericalAuto) && (
+      {currentPage === 5 && (selections.Auto || selections.Boat || selections.ClassicCar || selections.Motorcycle || selections.RV) && (
         <div style={{ marginBottom: '35px', marginTop: '95px' }}> {/* Add margin top and bottom */}
           <VehicleInputForm handleChange={handleChange} />
-
 
           <div>
             <button type="button"  className="button-QuotePage" onClick={handlePrevious}>
@@ -364,6 +368,24 @@ const Quote = () => {
         </div>
       )}
 
+{currentPage === 5 && (selections.CommericalAuto) && (
+        <div style={{ marginBottom: '35px', marginTop: '95px' }}> {/* Add margin top and bottom */}
+          <VehicleInputForm handleChange={handleChange} />
+
+          <div>
+            <button type="button"  className="button-QuotePage" onClick={handlePrevious}>
+              Previous
+            </button>
+
+            <button type="button" className="button-QuotePage" onClick={handleNext}>
+
+              Next 
+            </button>
+          </div>
+        </div>
+      )}
+
+
 
       {/* CommericalAuto */}
       {currentPage === 6 && selections.CommericalAuto && (
@@ -387,8 +409,8 @@ const Quote = () => {
             <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
-            <button type="button" className="button-QuotePage" onClick={handleNext}>
-              Next
+            <button type="button"  className="button-QuotePage" onClick={handleLastSubmission}>
+              Submit
             </button>
           </div>
         </div>
@@ -396,10 +418,10 @@ const Quote = () => {
 
 
       {/* Should be one less then the actual finish becuase it starts at 0 */}
-      {((currentPage === 7 && selections.CommericalAuto) ||
-        (currentPage === 8 && selections.Business) ||
+      {((currentPage === 8 && selections.CommericalAuto) ||
+        (currentPage === 9 && selections.Business) ||
         (currentPage === 5 && selections.Homeowners) ||
-        (currentPage === 6 && (selections.Auto || selections.RV || selections.Boat || selections.ClassicCar || selections.MotorCycle))) && (
+        (currentPage === 6 && (selections.Auto || selections.RV || selections.Boat || selections.ClassicCar || selections.Motorcycle))) && (
           <div style={{ marginBottom: '35px', marginTop: '95px' }}>
 
             <DisplayAllContent />

@@ -8,22 +8,23 @@ const ExtraCommericalAutoInfo = () => {
         const { name, value } = event.target;
         setUserInfo((prevState) => ({
             ...prevState,
-            ExtraCommericalAuto: {
-                ...prevState.ExtraCommericalAuto,
-                [name]: value,
-            },
+            ...prevState,
+            [name]: value,
         }));
     };
 
     return (
         <div>
+
+            <h2 style={{ borderBottom: '2px solid #ccc', paddingBottom: '5px', fontSize: '50px', color: '#3F5978' }}> Comemrical Auto Insurance Information </h2>
+
             <div className="input-container">
                 <label htmlFor="typeOfBusiness"> Type of Business:</label>
                 <input
                     type="text"
                     id="typeOfBusiness"
                     name="typeOfBusiness"
-                    value={userInfo.ExtraCommericalAuto.typeOfBusiness}
+                    value={userInfo.typeOfBusiness}
                     onChange={handleChange}
                     required
                 />
@@ -34,7 +35,9 @@ const ExtraCommericalAutoInfo = () => {
                 <select
                     id="categoryOfBusiness"
                     name="categoryOfBusiness"
-                    value={userInfo.ExtraCommericalAuto.categoryOfBusiness || ''}
+                    className="biggerSelectOption"
+
+                    value={userInfo.categoryOfBusiness || ''}
                     onChange={handleChange}
                     required
                 >
@@ -49,12 +52,12 @@ const ExtraCommericalAutoInfo = () => {
 
             <div className="input-container">
                 <label htmlFor="businessOperations">Description of Business Operations:</label>
-                <textarea
+                <input
                     id="businessOperations"
                     name="businessOperations"
-                    value={userInfo.ExtraCommericalAuto.businessOperations}
+                    value={userInfo.businessOperations}
                     onChange={handleChange}
-                ></textarea>
+                ></input>
             </div>
         </div>
     );

@@ -9,22 +9,21 @@ const ExtraBusinessInfo = () => {
 
         setUserInfo(prevState => ({
             ...prevState,
-            ExtraBusinessInfo: {
-                ...prevState.ExtraBusinessInfo,
                 [name]: value
-            }
         }));
     };
 
     return (
         <div>
+           <h2 style={{ borderBottom: '2px solid #ccc', paddingBottom: '5px', fontSize: '50px', color: '#3F5978' }}> Additional Business Information </h2>
+
             <div className="input-container">
                 <label htmlFor="commoditiesHauled"> Commodities Hauled and %'s:</label>
                 <input
                     type="text"
                     id="commoditiesHauled"
                     name="commoditiesHauled"
-                    value={userInfo.ExtraBusinessInfo.commoditiesHauled}
+                    value={userInfo.commoditiesHauled}
                     onChange={handleChange}
                     required
                 />
@@ -36,7 +35,7 @@ const ExtraBusinessInfo = () => {
                     type="text"
                     id="iccMCNumber"
                     name="iccMCNumber"
-                    value={userInfo.ExtraBusinessInfo.iccMCNumber}
+                    value={userInfo.iccMCNumber}
                     onChange={handleChange}
                     required
                 />
@@ -48,7 +47,7 @@ const ExtraBusinessInfo = () => {
                     type="text"
                     id="caDmvMcp"
                     name="caDmvMcp"
-                    value={userInfo.ExtraBusinessInfo.caDmvMcp}
+                    value={userInfo.caDmvMcp}
                     onChange={handleChange}
                     required
                 />
@@ -60,7 +59,7 @@ const ExtraBusinessInfo = () => {
                     type="text"
                     id="other"
                     name="other"
-                    value={userInfo.ExtraBusinessInfo.other}
+                    value={userInfo.other}
                     onChange={handleChange}
                 />
             </div>

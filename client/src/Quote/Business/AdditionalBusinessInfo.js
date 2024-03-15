@@ -9,28 +9,28 @@ const AdditionalBusinessInfo = () => {
 
         setUserInfo(prevState => ({
             ...prevState,
-            Business: {
-                ...prevState.Business,
-                AdditionalBusinessInfo: {
-                    ...prevState.Business.AdditionalBusinessInfo,
-                    [name]: value
-                }
+            coverageRequest: {
+                ...prevState.coverageRequest,
+                [name]: value
             }
         }));
     };
 
     return (
         <div>
-            <div> For Additional Units and/or Drivers Contact
+
+<h2 style={{ borderBottom: '2px solid #ccc', paddingBottom: '5px', fontSize: '50px', color: '#3F5978' }}> Addtional Business Information </h2>
+
+            <p> For Additional Units and/or Drivers Contact
                 our Underwriting Dept. Commercial lines.
-                Drivers Listing </div>
+                Drivers Listing </p>
             <div className="input-container">
                 <label htmlFor="fullName"> Full Name:</label>
                 <input
                     type="text"
                     id="fullName"
                     name="fullName"
-                    value={userInfo.Business.AdditionalBusinessInfo.fullName}
+                    value={userInfo.coverageRequest.fullName}
                     onChange={handleChange}
                     required
                 />
@@ -42,7 +42,7 @@ const AdditionalBusinessInfo = () => {
                     type="text"
                     id="licenseNumberState"
                     name="licenseNumberState"
-                    value={userInfo.Business.AdditionalBusinessInfo.licenseNumberState}
+                    value={userInfo.coverageRequest.licenseNumberState}
                     onChange={handleChange}
                     required
                 />
@@ -54,7 +54,7 @@ const AdditionalBusinessInfo = () => {
                     type="text"
                     id="violationsAccidents"
                     name="violationsAccidents"
-                    value={userInfo.Business.AdditionalBusinessInfo.violationsAccidents}
+                    value={userInfo.coverageRequest.violationsAccidents}
                     onChange={handleChange}
                     required
                 />
@@ -66,7 +66,7 @@ const AdditionalBusinessInfo = () => {
                     type="text"
                     id="yearsExperience"
                     name="yearsExperience"
-                    value={userInfo.Business.AdditionalBusinessInfo.yearsExperience}
+                    value={userInfo.coverageRequest.yearsExperience}
                     onChange={handleChange}
                     required
                 />
@@ -78,7 +78,7 @@ const AdditionalBusinessInfo = () => {
                     type="date"
                     id="dateOfBirth"
                     name="dateOfBirth"
-                    value={userInfo.Business.AdditionalBusinessInfo.dateOfBirth}
+                    value={userInfo.coverageRequest.dateOfBirth}
                     onChange={handleChange}
                 />
             </div>

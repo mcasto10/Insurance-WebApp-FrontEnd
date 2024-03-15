@@ -54,11 +54,11 @@ export const FormProvider = ({ children }) => {
         break;
       case "CommericalAuto":
         handleSelectionChange("CommericalAuto");
-        setTotalSteps(8);
+        setTotalSteps(9);
         break;
       case "Business":
         handleSelectionChange("Business");
-        setTotalSteps(9);
+        setTotalSteps(10);
         break;
       case "Homeowners":
         handleSelectionChange("Homeowners");

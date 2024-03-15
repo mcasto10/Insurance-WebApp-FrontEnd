@@ -11,7 +11,6 @@ const MakeReviewPage = ({ value, onRatingChange }) => {
   const location = useLocation();
   const queryParams = queryString.parse(location.search);
   const user = queryParams.user;
-  const email = queryParams.email;
 
   // If value exists that'll be the default 
   const [rating, setRating] = useState(value || 0);

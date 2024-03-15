@@ -30,214 +30,214 @@ const INITIAL_STATE = {
     vehiclesInfo: [],
 };
 
-const SELECTIONS_CONFIG = {
-    Auto: {
-        userInsurance: {
-            numIns: 0
-        },
-        coverageRequest: {
-            bodyInj: '',
-            propDamage: '',
-            collDeduct: '',
-            compDeduct: '',
-            uniMotor: '',
-        },
-    },
-    Motorcycle: {
-        userInsurance: {
-            numIns: 0
-        },
+// const SELECTIONS_CONFIG = {
+//     Auto: {
+//         userInsurance: {
+//             numIns: 0
+//         },
+//         coverageRequest: {
+//             bodyInj: '',
+//             propDamage: '',
+//             collDeduct: '',
+//             compDeduct: '',
+//             uniMotor: '',
+//         },
+//     },
+//     Motorcycle: {
+//         userInsurance: {
+//             numIns: 0
+//         },
 
-        coverageRequest: {
-            bodyInj: '',
-            propDamage: '',
-            collDeduct: '',
-            compDeduct: '',
-            uniMotor: '',
-        }
-    },
-    Boat: {
-        userInsurance: {
-            numIns: 0
-        },
-        coverageRequest: {
-            dwellingAmount: '',
-            otherStructureAmount: '',
-            lossOfUseAmount: '',
-            personLiabilitiesAmount: '',
-            collDeduct: '',
-            compDeduct: '',
-            uniMotor: '',
-            liabilityLimit: '',
-            limbiPd: '',
-            carValue: '',
-        }
-    },
+//         coverageRequest: {
+//             bodyInj: '',
+//             propDamage: '',
+//             collDeduct: '',
+//             compDeduct: '',
+//             uniMotor: '',
+//         }
+//     },
+//     Boat: {
+//         userInsurance: {
+//             numIns: 0
+//         },
+//         coverageRequest: {
+//             dwellingAmount: '',
+//             otherStructureAmount: '',
+//             lossOfUseAmount: '',
+//             personLiabilitiesAmount: '',
+//             collDeduct: '',
+//             compDeduct: '',
+//             uniMotor: '',
+//             liabilityLimit: '',
+//             limbiPd: '',
+//             carValue: '',
+//         }
+//     },
 
-    RV: {
-        coverageRequest: {
-            dwellingAmount: '',
-            otherStructureAmount: '',
-            lossOfUseAmount: '',
-            personLiabilitiesAmount: '',
-            collDeduct: '',
-            compDeduct: '',
-            uniMotor: '',
-            liabilityLimit: '',
-            limbiPd: '',
-            carValue: '',
-        }
-    },
+//     RV: {
+//         coverageRequest: {
+//             dwellingAmount: '',
+//             otherStructureAmount: '',
+//             lossOfUseAmount: '',
+//             personLiabilitiesAmount: '',
+//             collDeduct: '',
+//             compDeduct: '',
+//             uniMotor: '',
+//             liabilityLimit: '',
+//             limbiPd: '',
+//             carValue: '',
+//         }
+//     },
 
-    ClassicCar: {
-        userInsurance: {
-            numberOfClaims: '',
-            numIns: 0,
-            numClaim: ''
-        },
-        coverageRequest: {
-            dwellingAmount: '',
-            otherStructureAmount: '',
-            lossOfUseAmount: '',
-            personLiabilitiesAmount: '',
-            collDeduct: '',
-            compDeduct: '',
-            uniMotor: '',
-            liabilityLimit: '',
-            limbiPd: '',
-            carValue: '',
-        }
-    },
+//     ClassicCar: {
+//         userInsurance: {
+//             numberOfClaims: '',
+//             numIns: 0,
+//             numClaim: ''
+//         },
+//         coverageRequest: {
+//             dwellingAmount: '',
+//             otherStructureAmount: '',
+//             lossOfUseAmount: '',
+//             personLiabilitiesAmount: '',
+//             collDeduct: '',
+//             compDeduct: '',
+//             uniMotor: '',
+//             liabilityLimit: '',
+//             limbiPd: '',
+//             carValue: '',
+//         }
+//     },
 
-    Homeowners: {
-        userInsurance: {
-          loanAmount: '',
-          numIns: 0,
-        },
-        coverageRequest: {
-          dwellingAmount: '',
-          otherStructureAmount: '',
-          lossOfUseAmount: '',
-          personLiabilitiesAmount: '',
-          collDeduct: '',
-          compDeduct: '',
-          uniMotor: '',
-          liabilityLimit: '',
-          limbiPd: '',
-          carValue: '',
-        },
-        homeOwnerExtra: {
-          alarmSys: '',
-          numStories: 0,
-          gateComm: '',
-          homePurchYear: 0,
-          sqFootage: '',
-          lossFiveYear: '',
-          numCarGarage: 0,
-          breedOfDog: '',
-          constructionType: '',
-          roofType: '',
-          electric: '',
-          plumbing: '',
-        },
-      },
-};
+//     Homeowners: {
+//         userInsurance: {
+//           loanAmount: '',
+//           numIns: 0,
+//         },
+//         coverageRequest: {
+//           dwellingAmount: '',
+//           otherStructureAmount: '',
+//           lossOfUseAmount: '',
+//           personLiabilitiesAmount: '',
+//           collDeduct: '',
+//           compDeduct: '',
+//           uniMotor: '',
+//           liabilityLimit: '',
+//           limbiPd: '',
+//           carValue: '',
+//         },
+//         homeOwnerExtra: {
+//           alarmSys: '',
+//           numStories: 0,
+//           gateComm: '',
+//           homePurchYear: 0,
+//           sqFootage: '',
+//           lossFiveYear: '',
+//           numCarGarage: 0,
+//           breedOfDog: '',
+//           constructionType: '',
+//           roofType: '',
+//           electric: '',
+//           plumbing: '',
+//         },
+//       },
+// };
 
-const setBusinessInitialState = () => ({
-    Business: {
-        businessName: '',
-        owner: '',
-        date: '',
-        yearsInBusiness: '',
-        mailingAddress: '',
-        cityMailing: '',
-        stateMailing: '',
-        zipCodeMailing: '',
-        garagingAddress: '',
-        cityGaraging: '',
-        stateGaraging: '',
-        zipCodeGaraging: '',
-        phone: '',
-        cellPhone: '',
-        fax: '',
-        email: '',
-        radiusOfOperation: '',
-        currentInsurer: '',
-    },
-    coverageRequest: {
-        liabilityLimit: '',
-        cargoLimit: '',
-        physicalDamage: '',
-        generalLiabilityLimit: '',
-        unidentitidesNoneOwnedTrailer: '',
-        trailerInterchange: '',
-    },
-    AdditionalBusinessInfo: {
-        fullName: '',
-        licenseNumberState: '',
-        violationsAccidents: '',
-        yearsExperience: '',
-        dateOfBirth: '',
-    },
-    BusinessSchedule: {
-        vehicles: [
-            {
-                vehicleYear: '',
-                vehicleMake: '',
-                vehicleType: '',
-                gvwValue: '',
-                deductible: '',
-            },
-        ],
-    },
-    ExtraBusinessInfo: {
-        commoditiesHauled: '',
-        iccMCNumber: '',
-        caDmvMcp: '',
-        other: '',
-    },
-});
+// const setBusinessInitialState = () => ({
+//     Business: {
+//         businessName: '',
+//         owner: '',
+//         date: '',
+//         yearsInBusiness: '',
+//         mailingAddress: '',
+//         cityMailing: '',
+//         stateMailing: '',
+//         zipCodeMailing: '',
+//         garagingAddress: '',
+//         cityGaraging: '',
+//         stateGaraging: '',
+//         zipCodeGaraging: '',
+//         phone: '',
+//         cellPhone: '',
+//         fax: '',
+//         email: '',
+//         radiusOfOperation: '',
+//         currentInsurer: '',
+//     },
+//     coverageRequest: {
+//         liabilityLimit: '',
+//         cargoLimit: '',
+//         physicalDamage: '',
+//         generalLiabilityLimit: '',
+//         unidentitidesNoneOwnedTrailer: '',
+//         trailerInterchange: '',
+//     },
+//     AdditionalBusinessInfo: {
+//         fullName: '',
+//         licenseNumberState: '',
+//         violationsAccidents: '',
+//         yearsExperience: '',
+//         dateOfBirth: '',
+//     },
+//     BusinessSchedule: {
+//         vehicles: [
+//             {
+//                 vehicleYear: '',
+//                 vehicleMake: '',
+//                 vehicleType: '',
+//                 gvwValue: '',
+//                 deductible: '',
+//             },
+//         ],
+//     },
+//     ExtraBusinessInfo: {
+//         commoditiesHauled: '',
+//         iccMCNumber: '',
+//         caDmvMcp: '',
+//         other: '',
+//     },
+// });
 
-const setCommercialAutoInitialState = () => ({
-    CommericalAuto: {
-        autoYear: '',
-        autoMake: '',
-        autoModel: '',
-        vehicleValue: '',
-        vehicleIdentificationNumber: '',
-        vehiclesUsedFor: '',
-        radiusOfDriving: '',
-    },
-    CommericalVehicle: {
-        businessName: '',
-        state: '',
-        feiNumber: '',
-        dba: '',
-        contactName: '',
-        fax: '',
-        phone: '',
-        email: '',
-        city: '',
-        address: '',
-        currentInsuranceCompany: '',
-        currentPolicyExpirationDate: '',
-        yearsInsured: '',
-        claimsInLast3Years: '',
-        numClaim: '',
-        autoYear: '',
-        autoMake: '',
-        autoModel: '',
-        vehicleValue: '',
-        vehicleIdentificationNumber: '',
-        vehiclesUsedFor: '',
-        radiusOfDriving: '',
-    },
-    ExtraCommericalAuto: {
-        typeOfBusiness: '',
-        categoryOfBusiness: '',
-        businessOperations: '',
-    },
-});
+// const setCommercialAutoInitialState = () => ({
+//     CommericalAuto: {
+//         autoYear: '',
+//         autoMake: '',
+//         autoModel: '',
+//         vehicleValue: '',
+//         vehicleIdentificationNumber: '',
+//         vehiclesUsedFor: '',
+//         radiusOfDriving: '',
+//     },
+//     CommericalVehicle: {
+//         businessName: '',
+//         state: '',
+//         feiNumber: '',
+//         dba: '',
+//         contactName: '',
+//         fax: '',
+//         phone: '',
+//         email: '',
+//         city: '',
+//         address: '',
+//         currentInsuranceCompany: '',
+//         currentPolicyExpirationDate: '',
+//         yearsInsured: '',
+//         claimsInLast3Years: '',
+//         numClaim: '',
+//         autoYear: '',
+//         autoMake: '',
+//         autoModel: '',
+//         vehicleValue: '',
+//         vehicleIdentificationNumber: '',
+//         vehiclesUsedFor: '',
+//         radiusOfDriving: '',
+//     },
+//     ExtraCommericalAuto: {
+//         typeOfBusiness: '',
+//         categoryOfBusiness: '',
+//         businessOperations: '',
+//     },
+// });
 
 export const UserInfoProvider = ({ children }) => {
     const { selections } = useFormContext();

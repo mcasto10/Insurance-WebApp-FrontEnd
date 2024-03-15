@@ -47,7 +47,7 @@ const CoverageRequest = () => {
 
 
       {/* Auto, Motorcycle */}
-      {(selections.Auto || selections.Motorcycle) && (
+      {(selections.Auto || selections.Motorcycle || selections.CommericalAuto) && (
         <div>
           <div className="input-container">
             <label htmlFor="bodyInj"> Bodily Injury Liability: </label>
@@ -121,7 +121,7 @@ const CoverageRequest = () => {
       )}
 
       {/* Auto, Motorcycle, RV, Home, Boat, ClassicCar*/}
-      {(selections.Auto || selections.Homeowners || selections.Boat || selections.Motorcycle || selections.ClassicCar) && (
+      {(selections.Auto || selections.Homeowners || selections.Boat || selections.Motorcycle || selections.ClassicCar  || selections.CommericalAuto ) && (
         <div className="input-container">
           <label htmlFor="medPay"> Medical Payment:</label>
           <input
@@ -236,7 +236,7 @@ const CoverageRequest = () => {
       )}
 
       {/* Auto, RV, Motorcycle, ClassicCar */}
-      {(selections.Auto || selections.RV || selections.Motorcycle || selections.ClassicCar) && (
+      {(selections.Auto || selections.RV || selections.Motorcycle || selections.ClassicCar  || selections.CommericalAuto) && (
         <div className="input-container">
           <label htmlFor="collDeduct"> Collision Deductible:</label>
           <input
@@ -264,7 +264,7 @@ const CoverageRequest = () => {
       )}
 
       {/* Auto , RV , ClassicCar*/}
-      {(selections.Auto || selections.RV || selections.ClassicCar || selections.Motorcycle) && (
+      {(selections.Auto || selections.RV || selections.ClassicCar || selections.Motorcycle  || selections.CommericalAuto) && (
         <div className="input-container">
           <label htmlFor="compDeduct"> Comprehensive Deductible:</label>
           <input
@@ -289,7 +289,7 @@ const CoverageRequest = () => {
       )}
 
       {/* RV, ClassicCar, Business */}
-      {(selections.Business || selections.RV || selections.ClassicCar) && (
+      {(selections.Business || selections.RV || selections.ClassicCar  || selections.CommericalAuto) && (
         <div className="input-container">
           <label htmlFor="liabilityLimit">Liability Limit:</label>
           <input
@@ -384,7 +384,7 @@ const CoverageRequest = () => {
       )}
 
       {/* RV, ClassicCar */}
-      {(selections.RV || selections.ClassicCar) && (
+      {(selections.RV || selections.ClassicCar  || selections.CommericalAuto) && (
         <div className="input-container">
           <label htmlFor="limbiPd">LIMBI & PD:</label>
           <input

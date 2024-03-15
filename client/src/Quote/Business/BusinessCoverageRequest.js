@@ -8,8 +8,8 @@ const BusinessCoverageRequest = () => {
         const { name, value } = event.target;
         setUserInfo(prevState => ({
             ...prevState,
-            businessCoverageInfo: {
-                ...prevState.businessCoverageInfo,
+            coverageRequest: {
+                ...prevState.coverageRequest,
                 [name]: value
             }
         }));
@@ -17,13 +17,15 @@ const BusinessCoverageRequest = () => {
 
     return (
         <div> 
+                  <h2 style={{ borderBottom: '2px solid #ccc', paddingBottom: '5px', fontSize: '50px', color: '#3F5978' }}> Business Coverage Request </h2>
+
             <div className="input-container">
                 <label htmlFor="liabilityLimit"> Liability Limit:</label>
                 <input 
                     type="text" 
                     id="liabilityLimit" 
                     name="liabilityLimit" 
-                    value={userInfo.businessCoverageInfo.liabilityLimit}  
+                    value={userInfo.coverageRequest.liabilityLimit}  
                     onChange={handleChange}  
                     required 
                 />
@@ -35,7 +37,7 @@ const BusinessCoverageRequest = () => {
                     type="text" 
                     id="cargoLimit" 
                     name="cargoLimit" 
-                    value={userInfo.businessCoverageInfo.cargoLimit}  
+                    value={userInfo.coverageRequest.cargoLimit}  
                     onChange={handleChange}  
                     required 
                 />
@@ -47,7 +49,7 @@ const BusinessCoverageRequest = () => {
                     type="text" 
                     id="physicalDamage" 
                     name="physicalDamage" 
-                    value={userInfo.businessCoverageInfo.physicalDamage}  
+                    value={userInfo.coverageRequest.physicalDamage}  
                     onChange={handleChange}  
                     required 
                 />
@@ -59,7 +61,7 @@ const BusinessCoverageRequest = () => {
                     type="text" 
                     id="generalLiabilityLimit" 
                     name="generalLiabilityLimit" 
-                    value={userInfo.businessCoverageInfo.generalLiabilityLimit}  
+                    value={userInfo.coverageRequest.generalLiabilityLimit}  
                     onChange={handleChange}  
                     required 
                 />
@@ -71,7 +73,7 @@ const BusinessCoverageRequest = () => {
                     type="text" 
                     id="unidentitidesNoneOwnedTrailer" 
                     name="unidentitidesNoneOwnedTrailer" 
-                    value={userInfo.businessCoverageInfo.unidentitidesNoneOwnedTrailer}  
+                    value={userInfo.coverageRequest.unidentitidesNoneOwnedTrailer}  
                     onChange={handleChange}  
                     required 
                 />
@@ -83,7 +85,7 @@ const BusinessCoverageRequest = () => {
                     type="text" 
                     id="trailerInterchange" 
                     name="trailerInterchange" 
-                    value={userInfo.businessCoverageInfo.trailerInterchange}  
+                    value={userInfo.coverageRequest.trailerInterchange}  
                     onChange={handleChange}  
                     required 
                 />

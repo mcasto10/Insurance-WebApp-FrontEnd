@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import Navbar from './Components/Header';
 // import Footer from './Components/Footer';
 import { Route, Routes } from 'react-router-dom';
@@ -30,6 +30,8 @@ import RvPage from './pages/RvPage';
 
 import RestPassword from './Login/RestPassword/RestingPassword';
 import SendingEmailRestInfo from './Login/RestPassword/SendingEmailRestInfo';
+
+import ConfirmationQoutePage from './Quote/ConfirmationQoutePage.js';
 
 
 import ContactUsPage from './pages/ContactUsPage';
@@ -74,6 +76,7 @@ function App() {
           <Route path="/AppointmentBooking" element={<AppointmentBooking />} />
           <Route path="/RestPassword" element={<RestPassword />} />
           <Route path="/SendingEmailRestInfo" element={<SendingEmailRestInfo />} />
+          <Route path="/ConfirmationQoutePage" element={<ConfirmationQoutePage />} />
 
 
 

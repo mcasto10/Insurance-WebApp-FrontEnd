@@ -4,6 +4,8 @@ import { useUserInfo } from './UserInfoProvider';
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+
+
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
@@ -11,10 +13,14 @@ const AccordionItem = ({ title, content }) => {
   return (
     <div>
       <div onClick={toggleAccordion} style={{ cursor: 'pointer', padding: '10px', border: '1px solid #ccc', marginBottom: '5px' }}>
-      {isOpen ? ' - ' : ' + '} <strong>{title}</strong>
-            </div>
+        {isOpen ? ' - ' : ' + '} <strong>{title}</strong>
+      </div>
       
-      {!isOpen && <div style={{ padding: '10px', border: '1px solid #ccc', borderTop: 'none' }}>{content}</div>}
+      {!isOpen && (
+        <div style={{ maxHeight: '200px', overflowY: 'auto', padding: '10px', border: '1px solid #ccc', borderTop: 'none' }}>
+          {content}
+        </div>
+      )}
     </div>
   );
 };
@@ -76,50 +82,66 @@ const DisplayAllContent = () => {
     );
   };
 
-
-
   const RenderDriverInfo = () => (
     <div>
-      <ul>
-        {userInfo.driverInfo.map((driver, index) => (
-          <li key={index}>
-            <strong>Driver {index + 1} </strong> 
-
-            <ul>
+      {userInfo.driverInfo.map((driver, index) => (
+        <div key={index}>
+          <strong>Driver {index + 1}</strong>
+          <ul>
             {Object.entries(driver).map(([key, value]) => (
               <li key={key}>
-                <strong>{key}:</strong> {value}
+                {typeof value === 'object' ? (
+                  <ul>
+                    {Object.entries(value).map(([nestedKey, nestedValue]) => (
+                      <li key={nestedKey}>
+                        <strong>{nestedKey}:</strong> {nestedValue}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <span>
+                    <strong>{key}:</strong> {value}
+                  </span>
+                )}
               </li>
             ))}
           </ul>
-          </li>
-        ))}
-      </ul>
+        </div>
+      ))}
     </div>
   );
+  
+
   
   const RenderVehicleInfo = () => (
     <div>
-      <ul>
-        {userInfo.vehiclesInfo.map((vehicle, index) => (
-          <li key={index}>
-            <strong>Vehicle {index + 1}</strong>
-
-            <ul>
+      {userInfo.vehiclesInfo.map((vehicle, index) => (
+        <div key={index} style={{ marginBottom: '10px' }}>
+          <strong>Vehicle {index + 1}</strong>
+          <ul>
             {Object.entries(vehicle).map(([key, value]) => (
               <li key={key}>
-                <strong>{key}:</strong> {value}
+                {typeof value === "object" ? (
+                  <ul>
+                    {Object.entries(value).map(([nestedKey, nestedValue]) => (
+                      <li key={nestedKey}>
+                        <strong>{nestedKey}:</strong> {nestedValue}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <>
+                    <strong>{key}:</strong> {value}
+                  </>
+                )}
               </li>
             ))}
           </ul>
-          </li>
-        ))}
-      </ul>
+        </div>
+      ))}
     </div>
   );
   
-
-
 
   const sections = [
     { title: 'Contact Info', content: <Usercontent />},
