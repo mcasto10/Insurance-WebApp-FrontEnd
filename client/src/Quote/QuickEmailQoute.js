@@ -28,12 +28,13 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await axios.post('https://insurance-webapp-backend.onrender.com/user/quickEmailQuote', formData);
-    
+
     if (response.status === 200) {
       navigate('/MessageDelivered');
     } else {
       console.error('Email sending failed:', response.data.message);
     }
+    
   } catch (error) {
     console.error('Error sending data:', error);
     // Handle the error accordingly, such as displaying a message to the user

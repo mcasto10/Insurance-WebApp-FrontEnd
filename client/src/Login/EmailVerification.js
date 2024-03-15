@@ -89,12 +89,12 @@ const EmailVerification = () => {
       if (otpResponse.data.valid === true) {
 
         if (RestPassword) {
-          const newPassword = inputsRef.current.map(inputRef => inputRef.value).join('');
-          navigate(`/RestEmailPassword?email=${email}&otp=${otp}`);
+          navigate(`/RestPassword?email=${email}&otp=${otp}`);
         }
         
-
+        else {
         navigate(`/AccountSetUp?userID=${userID}&fromEmailVerification=true`);
+        }
       }
 
       else {

@@ -38,7 +38,6 @@ function RestPassword({ Login, error }) {
     };
 
 
-
     // method to handle the submitted information
     const submitHandler = async (e) => {
         e.preventDefault();
