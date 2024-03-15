@@ -1,7 +1,7 @@
 import CommericalAuto from '../assets/Agents/Commerical.png';
 import { useNavigate } from 'react-router-dom';
 import './PageLayout.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ZipCode from '../Features/ZipCode';
 
 
