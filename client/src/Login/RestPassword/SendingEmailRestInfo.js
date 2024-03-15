@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+
+
 import axios from 'axios';
 
 import '../Login.css';
@@ -69,7 +71,7 @@ function SendingEmailRestInfo({ Login, error }) {
                 </div>
 
                 <div className="box">
-                    <div>Don't have an account? <a className="signup" href="/SignUp">Sign Up</a></div>
+                <div>Don't have an account? <Link className="signup" to="/SignUp">Sign Up</Link></div>
                 </div>
             </div>
         </div>

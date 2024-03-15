@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
@@ -15,13 +15,13 @@ function LoginForm({ Login, error }) {
   }
 
 
-  const sendOTPAgain = async() => {
+  const sendOTPAgain = async () => {
     navigate('/EmailVerification');
   }
 
   return (
     <div className="login-card">
-       <div className='signUpText'> Log In </div>
+      <div className='signUpText'> Log In </div>
       <form className="login-form" onSubmit={submitHandler}>
 
         {error && (
@@ -53,14 +53,14 @@ function LoginForm({ Login, error }) {
             type="password"
             name="password"
             className="control"
-            required // indicate that the field is required 
+            required
             onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} />
           <div id="spinner" className="spinner"></div>
         </div>
 
         <button className="control" type="submit"> Log In </button>
 
-        <a class="forgot-password" href="SendingEmailRestInfo"> Forgot password?</a>
+        <Link className="forgot-password" to="/SendingEmailRestInfo">Forgot password?</Link>
 
         <div class="separator">
           <div class="line"></div>
@@ -70,7 +70,7 @@ function LoginForm({ Login, error }) {
       </form>
 
       <div class="box">
-        <div>Don't have an account? <a class="signup" href="/SignUp">Sign Up</a></div>
+        <div>Don't have an account? <Link className="signup" to="/SignUp">Sign Up</Link></div>
       </div>
     </div>
   )

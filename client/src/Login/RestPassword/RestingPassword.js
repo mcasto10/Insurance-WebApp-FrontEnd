@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import queryString from 'query-string';
 import axios from 'axios';
 
@@ -174,7 +174,7 @@ function RestPassword({ Login, error }) {
                 </div>
 
                 <div className="box">
-                    <div>Don't have an account? <a className="signup" href="/SignUp">Sign Up</a></div>
+                    <div>Don't have an account? <Link className="signup" to="/SignUp">Sign Up</Link></div>
                 </div>
             </div>
         </div>

@@ -237,10 +237,10 @@ function Login() {
     }
   };
 
-  const handleRescheduleAppointment = () => {
-    // Handle rescheduling logic
-    console.log("Reschedule appointment");
-  };
+  // const handleRescheduleAppointment = () => {
+  //   // Handle rescheduling logic
+  //   console.log("Reschedule appointment");
+  // };
 
 
 
@@ -278,9 +278,9 @@ function Login() {
                         Cancel Appointment
                       </button>{' '}
                       |{' '}
-                      <button style={{ backgroundColor: '#3F5978' }} onClick={handleRescheduleAppointment}>
+                      {/* <button style={{ backgroundColor: '#3F5978' }} onClick={handleRescheduleAppointment}>
                         Reschedule Appointment
-                      </button>
+                      </button> */}
                     </p>
                   </div>
                 ) : (

@@ -103,21 +103,21 @@ export default function Navbar() {
               </div>
               <div className="row">
                 <div className="column">
-                  <a href="/AutoPage"> Automobile Insurance </a>
-                  <a href="/AutoRegistration"> Auto registration services </a>
-                  <a href="/BoatPage"> Boat Insurance </a>
-                  <a href="/BusinessPage"> Business Insurance  </a>
+                  <Link to = "/AutoPage"> Automobile Insurance </Link>
+                  <Link to = "/AutoRegistration"> Auto registration services </Link>
+                  <Link to = "/BoatPage"> Boat Insurance </Link>
+                  <Link to ="/BusinessPage"> Business Insurance  </Link>
                 </div>
                 <div className="column">
-                  <a href="/ClassicCarPage"> Classic Car Insurance </a>
-                  <a href="/CommericalAutoPage"> Commerical Auto </a>
-                  <a href="/HomeOwnersPage"> Homeowners Insurance </a>
-                  <a href="/MotorCyclePage"> Motorcycle Insurance </a>
+                  <Link to="/ClassicCarPage"> Classic Car Insurance </Link>
+                  <Link to = "/CommericalAutoPage"> Commerical Auto </Link>
+                  <Link to = "/HomeOwnersPage"> Homeowners Insurance </Link>
+                  <Link to = "/MotorCyclePage"> Motorcycle Insurance </Link>
 
 
                 </div>
                 <div className="column">
-                  <a href="/RvPage"> RV Insurance </a>
+                  <Link to ="/RvPage"> RV Insurance </Link>
                 </div>
               </div>
             </div>
