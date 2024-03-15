@@ -124,7 +124,7 @@ function Login() {
         // Setting user and userinfo
         if (fromAccountSetUp) {
           try {
-            await axios.post(`https://insurance-webapp-backend.onrender.com/user/combinedUserInfo`, { someUserId: responseSignIn.userId, someBaseUserId: guestId });
+            await axios.post('https://insurance-webapp-backend.onrender.com/user/combinedUserInfo', { someUserId: responseSignIn.userId, someBaseUserId: guestId });
           
           } catch (error) {
             console.error(error);

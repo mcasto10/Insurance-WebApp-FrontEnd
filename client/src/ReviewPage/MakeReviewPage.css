@@ -83,3 +83,10 @@ button:hover {
 .applyReviewButton:hover{
   background-color: #4a6a91;
 }
+
+.verticalLine {
+  border-left: 1px solid #000;
+  height: 100px; 
+}
+
+

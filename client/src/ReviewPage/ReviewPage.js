@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';  // Assuming you are using React Router
+import { useLocation, useNavigate } from 'react-router-dom';  // Assuming you are using React Router
 import AllReviewStars from './AllReviewStars.js';
+
 
 const ReviewPage = () => {
 
   const location = useLocation();
+
   const isReviewPage = location.pathname === '/Review';
 
   const [reviews, setReviews] = useState([]);
@@ -14,7 +16,9 @@ const ReviewPage = () => {
   const [ratingStar, setRatingStar] = useState();
   const [selectedLocations, setSelectedLocations] = useState([]);
   const [showLoadMoreButton, setShowLoadMoreButton] = useState(true);
-  const commentsPerPage = 5; // Adjust as needed
+  const commentsPerPage = 5;
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     fetchReviews();
@@ -37,7 +41,7 @@ const ReviewPage = () => {
           selectedLocations: selectedLocations.join(',')
         }
       });
-    
+
 
       if (responseAllUserReview.status === 200) {
         const data = responseAllUserReview.data;
@@ -51,6 +55,43 @@ const ReviewPage = () => {
     }
   };
 
+  const handleReviewClick = async () => {
+    try {
+      const responseUserInfo = await axios.get('https://insurance-webapp-backend.onrender.com/user/CheckAuthStatus', {
+        withCredentials: true,
+      });
+
+
+      if (responseUserInfo.status === 200) {
+        try {
+          const responseUser = await axios.get(`https://insurance-webapp-backend.onrender.com/user/GetUserInformation?userId=${responseUserInfo.data.user.userId}`, {
+            withCredentials: true,
+          });
+
+
+          // Check if the response data contains user information
+          if (responseUser.data) {
+            const { firstName, middleName, lastName } = responseUser.data.userInfo;
+
+            const fullName = `${firstName} ${middleName} ${lastName}`.trim().replace(/\s+/g, ' ');
+
+
+            navigate(`/MakeReview?user=${fullName}`);
+
+          }
+        } catch (error) {
+          console.log("Incorrect User authentication ${error)");
+        }
+      }
+
+    } catch (error) {
+      console.error(`Error checking user login Status: ${error.message}`);
+
+      navigate('/Login-Type?routeFrom=ReviewPage');
+    }
+  }
+
+
   const handleLoadMoreClick = () => {
     const currentlyVisible = visibleReviews.length;
     const newVisible = reviews.slice(currentlyVisible, currentlyVisible + commentsPerPage);
@@ -60,7 +101,7 @@ const ReviewPage = () => {
 
   const handleRestrictionButton = async (event) => {
     event.preventDefault();
-    await fetchReviews(); 
+    await fetchReviews();
   };
 
   const handleCheckboxChange = (e) => {
@@ -176,7 +217,6 @@ const ReviewPage = () => {
             <h3 style={{ color: '#3F5978', fontSize: '25px' }}> Filter to see specific comments:</h3>
 
 
-
             <div className="checkbox-container">
               <input
                 type="checkbox"
@@ -209,9 +249,10 @@ const ReviewPage = () => {
             </div>
 
             <button onClick={handleRestrictionButton} className='applyReviewButton'> Apply </button>
-
-
           </div>
+
+
+
 
         </div>
 
@@ -223,8 +264,15 @@ const ReviewPage = () => {
         </div>
 
         {showLoadMoreButton && (
-          <button className = "loadMoreButton" onClick={handleLoadMoreClick}>Load More Comments</button>
+          <button className="loadMoreButton" onClick={handleLoadMoreClick}>Load More Comments</button>
+
         )}
+
+
+        {isReviewPage && (
+          <button className="MakeReview" onClick={handleReviewClick} >Make a Review</button>
+        )}
+
       </div>
     </form>
   );
