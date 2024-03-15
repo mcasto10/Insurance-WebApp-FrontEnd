@@ -28,6 +28,7 @@ const QuickEmailQuote = () => {
 
     try {
       await axios.post('https://insurance-webapp-backend.onrender.com/user/quickEmailQuote', formData);
+     console.log("entered Navigation Zone");
       navigate('/MessageDelivered');
       
     }

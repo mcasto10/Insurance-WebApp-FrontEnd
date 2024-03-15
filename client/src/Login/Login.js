@@ -41,7 +41,7 @@ function Login() {
         const responseCheckAuth = await axios.get('https://insurance-webapp-backend.onrender.com/user/CheckAuthStatus', {
           withCredentials: true,
         });
-        
+
 
         if (responseCheckAuth.status === 200) {
           const userData = responseCheckAuth.data;
@@ -50,7 +50,7 @@ function Login() {
           setUserName(userData.user.userName);
 
           eventBus.emit('userLoggedIn');
-          
+
 
           setLoading(true);
 
@@ -74,7 +74,7 @@ function Login() {
             const responseUserAppointment = await axios.post('https://insurance-webapp-backend.onrender.com/user/checkUserAppointment', responseCheckAuth.data.user.userId, {
               withCredentials: true,
             });
-          
+
 
             setUserAppointment(responseUserAppointment.data[0]);
 
@@ -111,7 +111,7 @@ function Login() {
       const responseSignIn = await axios.post('https://insurance-webapp-backend.onrender.com/user/SignIn', userData, {
         withCredentials: true,
       });
-      
+
 
 
       if (responseSignIn.status === 200) {
@@ -125,7 +125,7 @@ function Login() {
         if (fromAccountSetUp) {
           try {
             await axios.post('https://insurance-webapp-backend.onrender.com/user/combinedUserInfo', { someUserId: responseSignIn.userId, someBaseUserId: guestId });
-          
+
           } catch (error) {
             console.error(error);
           }
@@ -151,7 +151,7 @@ function Login() {
             const responseUserAppointment = await axios.post('https://insurance-webapp-backend.onrender.com/user/checkUserAppointment', responseSignIn.data.userId, {
               withCredentials: true,
             });
-          
+
 
 
             setUserAppointment(responseUserAppointment.data[0]);
@@ -188,7 +188,7 @@ function Login() {
       const responseUser = await axios.get(`https://insurance-webapp-backend.onrender.com/user/GetUserInformation?userId=${userId}`, {
         withCredentials: true,
       });
-    
+
 
       if (responseUser.data) {
         const {
@@ -265,23 +265,26 @@ function Login() {
                   <p>Loading...</p>
                 ) : userAppointment ? (
                   <div style={{ fontWeight: '300', fontSize: '18px' }}>
-                    <h3 className="underlined">Appointment Information</h3>
-                    <div>
-                      <p>Office Name: {userAppointment.officeName}</p>
-                      <p>Office Location: {userAppointment.officeLocation}</p>
-                      <p>Appointment Date: {new Date(userAppointment.appointmentDate).toLocaleDateString()}</p>
-                      <p>Appointment Time: {userAppointment.appointmentTime}</p>
-                    </div>
-                    <br />
-                    <p>
-                      <button style={{ backgroundColor: '#3F5978' }} onClick={handleCancelAppointment}>
-                        Cancel Appointment
-                      </button>{' '}
-                      |{' '}
-                      {/* <button style={{ backgroundColor: '#3F5978' }} onClick={handleRescheduleAppointment}>
+                    <div style={{ maxHeight: '200px', overflowY: 'auto', padding: '10px', border: '1px solid #ccc', borderTop: 'none' }}>
+
+                      <h3 className="underlined">Appointment Information</h3>
+                      <div>
+                        <p>Office Name: {userAppointment.officeName}</p>
+                        <p>Office Location: {userAppointment.officeLocation}</p>
+                        <p>Appointment Date: {new Date(userAppointment.appointmentDate).toLocaleDateString()}</p>
+                        <p>Appointment Time: {userAppointment.appointmentTime}</p>
+                      </div>
+                      <br />
+                      <p>
+                        <button style={{ backgroundColor: '#3F5978' }} onClick={handleCancelAppointment}>
+                          Cancel Appointment
+                        </button>{' '}
+                        |{' '}
+                        {/* <button style={{ backgroundColor: '#3F5978' }} onClick={handleRescheduleAppointment}>
                         Reschedule Appointment
                       </button> */}
-                    </p>
+                      </p>
+                    </div>
                   </div>
                 ) : (
                   <p>No Upcoming Appointment</p>
@@ -369,7 +372,7 @@ function Login() {
 
       ) : (
         <div className="center-container">
-         
+
           <div>
             <LoginForm Login={handleLogin} error={error} />
           </div>

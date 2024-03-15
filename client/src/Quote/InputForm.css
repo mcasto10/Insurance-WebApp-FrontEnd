@@ -21,19 +21,31 @@
     height: 45px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 8px ;
+    border-radius: 8px;
 
     padding: 10px;
 
     color: #888888;
 
-    
-     /* Adjust the length of the text box */
-     -webkit-appearance: none;
-     /* Safari and Chrome */
-     -moz-appearance: none;
-     /* Firefox */
-     appearance: none;
+
+    /* Adjust the length of the text box */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    -moz-appearance: none;
+    /* Firefox */
+    appearance: none;
+}
+
+.displayTitleColor {
+    color: #3f5978;
+    font-size: 22px;
+
 }
 
 
+.displayParColor {
+    color: #3f5978;
+    font-size: 18px;
+    font-weight: 300;
+
+}

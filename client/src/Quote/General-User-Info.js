@@ -23,7 +23,6 @@ const GeneralUserInfo = () => {
         newValue = charRegex.test(value) ? value : userInfo.name || '';
         break;
       case 'address':
-      case 'email':
       case 'city':
         // Allow characters and numbers for "Address", "Email", "City"
         newValue = charNumRegex.test(value) ? value : userInfo[name] || '';
@@ -33,6 +32,9 @@ const GeneralUserInfo = () => {
         // Allow only numeric characters for "Phone" and "Fax"
         const maxLength = 10;
         newValue = numericRegex.test(value) ? value.slice(0, maxLength) : userInfo[name] || '';
+        break;
+      case 'email':
+        newValue = value;
         break;
       default:
         // For other fields, use the existing logic
@@ -62,7 +64,7 @@ const GeneralUserInfo = () => {
 
   return (
     <div className="general-user-info-container">
-<h2 style={{ borderBottom: '2px solid #ccc', fontSize: '50px', color: '#3F5978', paddingBottom: '5px' }}>Contact Info</h2>
+      <h2 style={{ borderBottom: '2px solid #ccc', fontSize: '50px', color: '#3F5978', paddingBottom: '5px' }}>Contact Info</h2>
 
       <div className="input-row">
         {renderInputField('Contact Name', 'name')}
@@ -92,7 +94,7 @@ const GeneralUserInfo = () => {
 
         <div className="input-container">
 
-          <div style = {{color: '#3F5978', fontSize: '18px'}}>Best way to contact you:</div>
+          <div style={{ color: '#3F5978', fontSize: '18px' }}>Best way to contact you:</div>
 
           <select
             id="contact"
