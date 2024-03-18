@@ -105,7 +105,7 @@ const DisplayAllContent = () => {
   );
 
 
-  const additionalUsercontent = () => (
+  const AdditionalUsercontent = () => (
     <ul>
       {Object.entries(userInfo).map(([key, value]) => (
         <li key={key}>
@@ -170,6 +170,8 @@ const DisplayAllContent = () => {
     violationsAccidents: "Violations/Accidents",
     yearsExperience: "Years Experience",
     dateOfBirth: "Date of Birth (optional)",
+    limbiPd: "LIMBI & PD",
+    carValue: "Value of Car"
   };
 
 
@@ -211,7 +213,19 @@ const DisplayAllContent = () => {
           <ul>
             {Object.entries(driver).map(([key, value]) => (
               <li key={key}>
-                <strong>{driverInputFormLabels[key]}:</strong> {value}
+                {typeof value === 'object' ? (
+                  <ul>
+                    {Object.entries(value).map(([nestedKey, nestedValue]) => (
+                      <li key={nestedKey}>
+                        <strong>{nestedKey}:</strong> {nestedValue}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <span>
+                    <strong>{driverInputFormLabels[key]}:</strong> {value}
+                  </span>
+                )}
               </li>
             ))}
           </ul>
@@ -219,7 +233,7 @@ const DisplayAllContent = () => {
       ))}
     </div>
   );
-
+  
 
   const vehicleInputFormLabels = {
     year: "Year",
@@ -237,6 +251,8 @@ const DisplayAllContent = () => {
     parkedLocation: "Location RV primarily parked",
   };
 
+
+
   const RenderVehicleInfo = () => (
     <div>
       {userInfo.vehiclesInfo.map((vehicle, index) => (
@@ -245,7 +261,19 @@ const DisplayAllContent = () => {
           <ul>
             {Object.entries(vehicle).map(([key, value]) => (
               <li key={key}>
-                <strong>{vehicleInputFormLabels[key]}:</strong> {value}
+                {typeof value === "object" ? (
+                  <ul>
+                    {Object.entries(value).map(([nestedKey, nestedValue]) => (
+                      <li key={nestedKey}>
+                        <strong>{nestedKey}:</strong> {nestedValue}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <>
+                    <strong>{vehicleInputFormLabels[key]}:</strong> {value}
+                  </>
+                )}
               </li>
             ))}
           </ul>
@@ -254,7 +282,6 @@ const DisplayAllContent = () => {
     </div>
   );
 
-
   const sections = [
     {
       title: <div className='displayTitleColor'>Contact Info</div>,
@@ -262,7 +289,7 @@ const DisplayAllContent = () => {
     },
     {
       title: <div className='displayTitleColor'> Additional User Information</div>,
-      content: <div className='displayParColor'><additionalUsercontent /></div>
+      content: <div className='displayParColor'><AdditionalUsercontent /></div>
 
     },
     {
