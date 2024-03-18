@@ -160,12 +160,10 @@ function Login() {
 
 
             console.log("Checking User appointment");
+
             const responseUserAppointment = await axios.post(
               'http://localhost:3001/user/checkUserAppointment',
-              { Username: responseSignIn.data.userId }, 
-              {
-                withCredentials: true,
-              }
+              { Username: responseSignIn.data.userId }
             );
 
             console.log(responseUserAppointment, " responsed USer Appointment")
