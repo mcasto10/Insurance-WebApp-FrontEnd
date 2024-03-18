@@ -281,8 +281,7 @@ function Login() {
                       <p>
                         <button style={{ backgroundColor: '#3F5978' }} onClick={handleCancelAppointment}>
                           Cancel Appointment
-                        </button>{' '}
-                        |{' '}
+                        </button>
                         {/* <button style={{ backgroundColor: '#3F5978' }} onClick={handleRescheduleAppointment}>
                         Reschedule Appointment
                       </button> */}
