@@ -113,13 +113,9 @@ function Login() {
         password: details.password,
       };
 
-      console.log("Sending User Data onto Sign In");
-
       const responseSignIn = await axios.post('https://insurance-webapp-backend.onrender.com/user/SignIn', userData, {
         withCredentials: true,
       });
-
-      console.log(responseSignIn, " response Sign In");
 
 
       if (responseSignIn.status === 200) {
@@ -127,9 +123,6 @@ function Login() {
         setUser(userInfo);
         setUserName(userInfo);
         eventBus.emit('userLoggedIn');
-
-
-        console.log("Entered resposne signIN ")
 
 
         // Setting user and userinfo
@@ -158,23 +151,15 @@ function Login() {
           try {
             setLoading(true);
 
-
-            console.log("Checking User appointment");
-
             const responseUserAppointment = await axios.post(
-              'http://localhost:3001/user/checkUserAppointment',
-              { Username: responseSignIn.data.userId }
+              'https://insurance-webapp-backend.onrender.com/user/checkUserAppointment',
+              { Username: responseSignIn.data.userId }, // Send userId as an object
+              {
+                withCredentials: true,
+              }
             );
 
-            console.log(responseUserAppointment, " responsed USer Appointment")
-
-            console.log("Entered User Appointment");
-
-
             setUserAppointment(responseUserAppointment.data[0]);
-
-
-            console.log(userAppointment, " set user appointmetn");
           } catch (error) {
             console.error('Authentication status check failed:', error);
           } finally {
@@ -296,7 +281,8 @@ function Login() {
                       <p>
                         <button style={{ backgroundColor: '#3F5978' }} onClick={handleCancelAppointment}>
                           Cancel Appointment
-                        </button> 
+                        </button>{' '}
+                        |{' '}
                         {/* <button style={{ backgroundColor: '#3F5978' }} onClick={handleRescheduleAppointment}>
                         Reschedule Appointment
                       </button> */}
