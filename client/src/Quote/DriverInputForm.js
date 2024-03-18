@@ -43,8 +43,8 @@ const DriverInputForm = () => {
                             licenseNumber: '',
                         }
                     }
-    
-    
+
+
                     // Add Motorcycle section if selected
                     if (selections.Motorcycle) {
                         driverInfoObject.Motorcycle = {
@@ -53,7 +53,7 @@ const DriverInputForm = () => {
                             atFaultAccidents: '',
                         };
                     }
-    
+
                     // Add Commercial Auto section if selected
                     if (selections.CommericalAuto) {
                         driverInfoObject.CommericalAuto = {
@@ -62,7 +62,7 @@ const DriverInputForm = () => {
                             licenseNumber: '',
                         };
                     }
-    
+
                     // Add Boat section if selected
                     if (selections.Boat) {
                         driverInfoObject.Boat = {
@@ -74,13 +74,13 @@ const DriverInputForm = () => {
                             licenseDescription: '',
                         };
                     }
-    
+
                     return driverInfoObject;
                 }),
             }));
         }
     };
-    
+
 
     const handleInputChange = (index, field, value) => {
         const charRegex = /^[A-Za-z\s]*$/;
@@ -125,7 +125,7 @@ const DriverInputForm = () => {
 
     return (
         <div>
-   
+
             <h2 style={{ fontSize: '40px', color: '#3F5978' }}>How many people's information do you want to enter?</h2>
 
             <select
@@ -185,6 +185,9 @@ const DriverInputForm = () => {
                                 onChange={(e) => handleInputChange(index, 'marital', e.target.value)}
                                 className='typeSelect'
                             >
+
+                                <option value=""> Select a option </option>
+
                                 <option value="Married">Married</option>
                                 <option value="Single">Single</option>
                                 <option value="Other">Other</option>
@@ -202,6 +205,9 @@ const DriverInputForm = () => {
                                 onChange={(e) => handleInputChange(index, 'gender', e.target.value)}
                                 className='typeSelect'
                             >
+
+                                <option value=""> Select a option </option>
+
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                                 <option value="Other">Other</option>
@@ -224,79 +230,79 @@ const DriverInputForm = () => {
 
                     </div>
 
-{/* MotorCycle, Commerical Auto */}
-{(selections.Motorcycle || selections.CommericalAuto) && (
-    <div className="input-row">
-        <div className="input-container">
-            <label>Number of Moving Violations:</label>
-            <input
-                type="text"
-                value={userInfo.driverInfo[index]?.movingViolations || ''}
-                onChange={(e) => handleInputChange(index, 'movingViolations', e.target.value)}
-            />
-        </div>
-        <div className="input-container">
-            <label>Number of at-fault accidents:</label>
-            <input
-                type="text"
-                value={userInfo.driverInfo[index]?.atFaultAccidents || ''}
-                onChange={(e) => handleInputChange(index, 'atFaultAccidents', e.target.value)}
-            />
-        </div>
-    </div>
-)}
+                    {/* MotorCycle, Commerical Auto */}
+                    {(selections.Motorcycle || selections.CommericalAuto) && (
+                        <div className="input-row">
+                            <div className="input-container">
+                                <label>Number of Moving Violations:</label>
+                                <input
+                                    type="text"
+                                    value={userInfo.driverInfo[index]?.movingViolations || ''}
+                                    onChange={(e) => handleInputChange(index, 'movingViolations', e.target.value)}
+                                />
+                            </div>
+                            <div className="input-container">
+                                <label>Number of at-fault accidents:</label>
+                                <input
+                                    type="text"
+                                    value={userInfo.driverInfo[index]?.atFaultAccidents || ''}
+                                    onChange={(e) => handleInputChange(index, 'atFaultAccidents', e.target.value)}
+                                />
+                            </div>
+                        </div>
+                    )}
 
-{/* Boat */}
-{selections.Boat && (
-    <div>
-        <div className="input-row">
-            <div className="input-container">
-                <label>Year Boat Ownership:</label>
-                <input
-                    type="text"
-                    value={userInfo.driverInfo[index]?.boatOwnershipYear || ''}
-                    onChange={(e) => handleInputChange(index, 'boatOwnershipYear', e.target.value)}
-                />
-            </div>
-            <div className="input-container">
-                <label>Year Boat Experience:</label>
-                <input
-                    type="text"
-                    value={userInfo.driverInfo[index]?.boatingExperienceYear || ''}
-                    onChange={(e) => handleInputChange(index, 'boatingExperienceYear', e.target.value)}
-                />
-            </div>
-        </div>
-        <div className="input-row">
-            <div className="input-container">
-                <label>Describe all marine insurance loss:</label>
-                <input
-                    type="text"
-                    value={userInfo.driverInfo[index]?.marineInsuranceLoss || ''}
-                    onChange={(e) => handleInputChange(index, 'marineInsuranceLoss', e.target.value)}
-                />
-            </div>
-            <div className="input-container">
-                <label>Describe license number:</label>
-                <input
-                    type="text"
-                    value={userInfo.driverInfo[index]?.licenseDescription || ''}
-                    onChange={(e) => handleInputChange(index, 'licenseDescription', e.target.value)}
-                />
-            </div>
-        </div>
-        <div className="input-row">
-            <div className="input-container">
-                <label>Have any operators completed a boating safety course:</label>
-                <input
-                    type="text"
-                    value={userInfo.driverInfo[index]?.completedBoatingSafetyCourse || ''}
-                    onChange={(e) => handleInputChange(index, 'completedBoatingSafetyCourse', e.target.value)}
-                />
-            </div>
-        </div>
-    </div>
-)}
+                    {/* Boat */}
+                    {selections.Boat && (
+                        <div>
+                            <div className="input-row">
+                                <div className="input-container">
+                                    <label>Year Boat Ownership:</label>
+                                    <input
+                                        type="text"
+                                        value={userInfo.driverInfo[index]?.boatOwnershipYear || ''}
+                                        onChange={(e) => handleInputChange(index, 'boatOwnershipYear', e.target.value)}
+                                    />
+                                </div>
+                                <div className="input-container">
+                                    <label>Year Boat Experience:</label>
+                                    <input
+                                        type="text"
+                                        value={userInfo.driverInfo[index]?.boatingExperienceYear || ''}
+                                        onChange={(e) => handleInputChange(index, 'boatingExperienceYear', e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                            <div className="input-row">
+                                <div className="input-container">
+                                    <label>Describe all marine insurance loss:</label>
+                                    <input
+                                        type="text"
+                                        value={userInfo.driverInfo[index]?.marineInsuranceLoss || ''}
+                                        onChange={(e) => handleInputChange(index, 'marineInsuranceLoss', e.target.value)}
+                                    />
+                                </div>
+                                <div className="input-container">
+                                    <label>Describe license number:</label>
+                                    <input
+                                        type="text"
+                                        value={userInfo.driverInfo[index]?.licenseDescription || ''}
+                                        onChange={(e) => handleInputChange(index, 'licenseDescription', e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                            <div className="input-row">
+                                <div className="input-container">
+                                    <label>Have any operators completed a boating safety course:</label>
+                                    <input
+                                        type="text"
+                                        value={userInfo.driverInfo[index]?.completedBoatingSafetyCourse || ''}
+                                        onChange={(e) => handleInputChange(index, 'completedBoatingSafetyCourse', e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    )}
 
 
                 </div>

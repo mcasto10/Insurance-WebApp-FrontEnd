@@ -56,7 +56,7 @@ const Quote = () => {
   const InsuranceType = queryParams.InsuranceType;
   const zipCode = queryParams.zipCode;
   const goToStep = queryParams.goToStep;
-  
+
 
   const {
     currentStep,
@@ -95,10 +95,10 @@ const Quote = () => {
 
 
       navigate(`/ConfirmationQoutePage`);
-        } catch (error) {
+    } catch (error) {
       console.error('Error submitting user info:', error);
     }
-    
+
   };
 
   const handleLastSubmission = async () => {
@@ -116,8 +116,8 @@ const Quote = () => {
 
   return (
     // Setting left and right margins
-    <form className="quote-Position" onSubmit={handleSubmit}>
-      
+    <div className="quote-Position">
+
       {/* Elements for pages after 0 */}
       {(currentPage > 0) && (
         <div style={{ marginTop: '80px' }}>
@@ -139,7 +139,7 @@ const Quote = () => {
 
             {/* Places text in aligned in column */}
             <div className='right-column'>
-              <p style = {{color: '#3F5978', fontSize: '18px'}}> Choose your insurance type </p>
+              <p style={{ color: '#3F5978', fontSize: '18px' }}> Choose your insurance type </p>
               <select
                 id="insuranceType"
                 value={selectedOption}
@@ -156,7 +156,7 @@ const Quote = () => {
                 <option value="CommericalAuto">Commerical Auto</option>
               </select>
 
-              <p style = {{color: '#3F5978', fontSize: '18px'}}> 
+              <p style={{ color: '#3F5978', fontSize: '18px' }}>
                 Please enter your zip code
               </p>
 
@@ -182,7 +182,7 @@ const Quote = () => {
 
           <div>
 
-            <input type="submit" value="Begin Quote" className="beginQouteButton" />
+            <button type="button" onClick={handleSubmit} className="beginQouteButton">Begin Quote</button>
 
           </div>
 
@@ -219,10 +219,10 @@ const Quote = () => {
           <GeneralUserInsurance handleChange={handleChange} />
 
           <div>
-            <button type="button"  className="button-QuotePage" onClick={handlePrevious}>
+            <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
-            <button type="button"  className="button-QuotePage" onClick={handleNext}>
+            <button type="button" className="button-QuotePage" onClick={handleNext}>
               Next
             </button>
           </div>
@@ -238,7 +238,7 @@ const Quote = () => {
             <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
-            <button type="button"  className="button-QuotePage" onClick={handleNext}>
+            <button type="button" className="button-QuotePage" onClick={handleNext}>
               Next
             </button>
           </div>
@@ -252,11 +252,11 @@ const Quote = () => {
           <DriverInputForm handleChange={handleChange} />
 
           <div>
-            <button type="button"  className="button-QuotePage" onClick={handlePrevious}>
+            <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
 
-            <button type="button"  className="button-QuotePage" onClick={handleNext}>
+            <button type="button" className="button-QuotePage" onClick={handleNext}>
               Next
             </button>
 
@@ -271,11 +271,11 @@ const Quote = () => {
           <VehicleInputForm handleChange={handleChange} />
 
           <div>
-            <button type="button"  className="button-QuotePage" onClick={handlePrevious}>
+            <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
-            <button type="button"  className="button-QuotePage" onClick={handleLastSubmission}>
-              Submit 
+            <button type="button" className="button-QuotePage" onClick={handleLastSubmission}>
+              Submit
             </button>
           </div>
         </div>
@@ -287,11 +287,11 @@ const Quote = () => {
         <div style={{ marginBottom: '35px', marginTop: '95px' }}>
           <HomeOwnerGeneralInfo handleChange={handleChange} />
           <div>
-            <button type="button" className="button-QuotePage"  onClick={handlePrevious}>
+            <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
             <button type="button" className="button-QuotePage" onClick={handleLastSubmission}>
-              Submit 
+              Submit
             </button>
           </div>
         </div>
@@ -316,10 +316,10 @@ const Quote = () => {
         <div style={{ marginBottom: '35px', marginTop: '95px' }}>
           <ExtraBusinessInfo handleChange={handleChange} />
           <div>
-            <button type="button" className="button-QuotePage"  onClick={handlePrevious}>
+            <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
-            <button type="button" className="button-QuotePage"  onClick={handleNext}>
+            <button type="button" className="button-QuotePage" onClick={handleNext}>
               Next
             </button>
           </div>
@@ -369,18 +369,18 @@ const Quote = () => {
         </div>
       )}
 
-{currentPage === 5 && (selections.CommericalAuto) && (
+      {currentPage === 5 && (selections.CommericalAuto) && (
         <div style={{ marginBottom: '35px', marginTop: '95px' }}> {/* Add margin top and bottom */}
           <VehicleInputForm handleChange={handleChange} />
 
           <div>
-            <button type="button"  className="button-QuotePage" onClick={handlePrevious}>
+            <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
 
             <button type="button" className="button-QuotePage" onClick={handleNext}>
 
-              Next 
+              Next
             </button>
           </div>
         </div>
@@ -410,7 +410,7 @@ const Quote = () => {
             <button type="button" className="button-QuotePage" onClick={handlePrevious}>
               Previous
             </button>
-            <button type="button"  className="button-QuotePage" onClick={handleLastSubmission}>
+            <button type="button" className="button-QuotePage" onClick={handleLastSubmission}>
               Submit
             </button>
           </div>
@@ -433,7 +433,7 @@ const Quote = () => {
               </button>
 
 
-              <div style={{fontWeight: 'bold', fontSize: '25px'}}> To Get A Price </div>
+              <div style={{ fontWeight: 'bold', fontSize: '25px' }}> To Get A Price </div>
               <button type="button" className="button-QuotePage" onClick={handleUserQuote}>
                 Contact Agent </button>
 
@@ -443,7 +443,7 @@ const Quote = () => {
 
       {/* </UserInfoProvider> */}
 
-    </form>
+    </div>
   )
 }
 

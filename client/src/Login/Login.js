@@ -43,6 +43,10 @@ function Login() {
         });
 
 
+        console.log('Sign-In Response:', responseCheckAuth);
+
+
+
         if (responseCheckAuth.status === 200) {
           const userData = responseCheckAuth.data;
 
@@ -113,6 +117,9 @@ function Login() {
       });
 
 
+      console.log('Sign-In Response:', responseSignIn);
+
+
 
       if (responseSignIn.status === 200) {
         const userInfo = responseSignIn.data.userName;
@@ -151,6 +158,8 @@ function Login() {
             const responseUserAppointment = await axios.post('https://insurance-webapp-backend.onrender.com/user/checkUserAppointment', responseSignIn.data.userId, {
               withCredentials: true,
             });
+
+            console.log(responseUserAppointment);
 
 
 
