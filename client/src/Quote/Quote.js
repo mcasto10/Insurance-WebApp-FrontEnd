@@ -432,12 +432,12 @@ const Quote = () => {
                 Previous
               </button>
 
-
-              <div style={{ fontWeight: 'bold', fontSize: '25px' }}> To Get A Price </div>
-              <button type="button" className="button-QuotePage" onClick={handleUserQuote}>
-                Contact Agent </button>
-
+              {" "}{"|"}{" "}
+              <button type="button" className="submit-button-QuotePage" onClick={handleUserQuote}>
+                Contact Agent
+              </button>
             </div>
+
           </div>
         )}
 

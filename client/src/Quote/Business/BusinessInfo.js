@@ -194,23 +194,23 @@ const BusinessInfo = () => {
 
 
                 <div className="input-container">
-                    <label htmlFor="phone">Phone:</label>
+                    <label htmlFor="phone">Business Phone:</label>
                     <input
                         type="tel"
-                        id="phone"
-                        name="phone"
-                        value={userInfo.phone}
+                        id="businessPhone"
+                        name="businessPhone"
+                        value={userInfo.businessPhone}
                         onChange={handleChange}
                     />
                 </div>
 
                 <div className="input-container">
-                    <label htmlFor="cellPhone">Cell Phone:</label>
+                    <label htmlFor="businessCellPhone">Business Cell Phone:</label>
                     <input
                         type="tel"
-                        id="cellPhone"
-                        name="cellPhone"
-                        value={userInfo.cellPhone}
+                        id="businessCellPhone"
+                        name="businessCellPhone"
+                        value={userInfo.businessCellPhone}
                         onChange={handleChange}
                     />
                 </div>
@@ -221,23 +221,23 @@ const BusinessInfo = () => {
 
 
                 <div className="input-container">
-                    <label htmlFor="fax">Fax:</label>
+                    <label htmlFor="fax"> Busines Fax:</label>
                     <input
                         type="tel"
-                        id="fax"
-                        name="fax"
-                        value={userInfo.fax}
+                        id="businesFax"
+                        name="businesFax"
+                        value={userInfo.businesFax}
                         onChange={handleChange}
                     />
                 </div>
 
                 <div className="input-container">
-                    <label htmlFor="email">Email Address:</label>
+                    <label htmlFor="email"> Business Email Address:</label>
                     <input
                         type="email"
-                        id="email"
-                        name="email"
-                        value={userInfo.email}
+                        id="businesEmail"
+                        name="businesEmail"
+                        value={userInfo.businesEmail}
                         onChange={handleChange}
                     />
                 </div>

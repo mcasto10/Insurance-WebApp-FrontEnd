@@ -25,12 +25,12 @@ const CommericalAutoInputForm = () => {
 
 
                 <div className="input-container">
-                    <label htmlFor="businessName"> Business Name:</label>
+                    <label htmlFor="commericalName"> Commerical Name:</label>
                     <input
                         type="text"
-                        id="businessName"
-                        name="businessName"
-                        value={userInfo.businessName}
+                        id="commericalName"
+                        name="commericalName"
+                        value={userInfo.commericalName}
                         onChange={handleChange}
                         required
                     />
@@ -95,12 +95,12 @@ const CommericalAutoInputForm = () => {
                 </div>
 
                 <div className="input-container">
-                    <label htmlFor="fax">Fax:</label>
+                    <label htmlFor="fax"> Commerical Fax:</label>
                     <input
                         type="tel"
-                        id="fax"
-                        name="fax"
-                        value={userInfo.fax}
+                        id="commericalFax"
+                        name="commericalFax"
+                        value={userInfo.commericalFax}
                         onChange={handleChange}
                     />
                 </div>
@@ -111,23 +111,23 @@ const CommericalAutoInputForm = () => {
 
 
                 <div className="input-container">
-                    <label htmlFor="phone">Phone:</label>
+                    <label htmlFor="phone"> Commerical Phone:</label>
                     <input
                         type="tel"
-                        id="phone"
-                        name="phone"
-                        value={userInfo.phone}
+                        id="commericalPhone"
+                        name="commericalPhone"
+                        value={userInfo.commericalPhone}
                         onChange={handleChange}
                     />
                 </div>
 
                 <div className="input-container">
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email">Commerical Email:</label>
                     <input
                         type="email"
-                        id="email"
-                        name="email"
-                        value={userInfo.email}
+                        id="commericalEmail"
+                        name="commericalEmail"
+                        value={userInfo.commericalEmail}
                         onChange={handleChange}
                     />
                 </div>
@@ -138,22 +138,22 @@ const CommericalAutoInputForm = () => {
 
 
                 <div className="input-container">
-                    <label htmlFor="city">City:</label>
+                    <label htmlFor="city">Commerical City:</label>
                     <input
                         type="text"
-                        id="city"
-                        name="city"
-                        value={userInfo.city}
+                        id="commericalCity"
+                        name="commericalCity"
+                        value={userInfo.commericalCity}
                         onChange={handleChange}
                     />
                 </div>
 
                 <div className="input-container">
-                    <label htmlFor="address">Address:</label>
+                    <label htmlFor="address"> Commerical Address:</label>
                     <input
-                        id="address"
-                        name="address"
-                        value={userInfo.address}
+                        id="commericalAddress"
+                        name="commericalAddress"
+                        value={userInfo.commericalAddress}
                         onChange={handleChange}
                     ></input>
                 </div>
@@ -162,12 +162,12 @@ const CommericalAutoInputForm = () => {
             <div className="input-row">
 
                 <div className="input-container">
-                    <label htmlFor="zipcode">Zipcode:</label>
+                    <label htmlFor="zipcode"> Commerical Zipcode:</label>
                     <input
                         type="text"
-                        id="zipcode"
-                        name="zipcode"
-                        value={userInfo.zipcode}
+                        id="commericalZipCode"
+                        name="commericalZipCode"
+                        value={userInfo.commericalZipCode}
                         onChange={handleChange}
                     />
                 </div>

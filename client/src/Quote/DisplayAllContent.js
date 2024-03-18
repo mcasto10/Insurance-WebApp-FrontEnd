@@ -12,9 +12,9 @@ const AccordionItem = ({ title, content }) => {
 
   return (
     <div>
-      <div onClick={toggleAccordion} style={{ cursor: 'pointer', padding: '10px', border: '1px solid #ccc', marginBottom: '5px' }}>
-        {isOpen ? ' - ' : ' + '} <strong>{title}</strong>
-      </div>
+<div onClick={toggleAccordion} style={{ cursor: 'pointer', padding: '10px', border: '1px solid #ccc', backgroundColor: '#F7F8FC', color: '#000', marginBottom: '5px' }}>
+  {isOpen ? ' - ' : ' + '} <strong>{title}</strong>
+</div>
 
       {!isOpen && (
         <div style={{ maxHeight: '200px', overflowY: 'auto', padding: '10px', border: '1px solid #ccc', borderTop: 'none' }}>
@@ -39,6 +39,19 @@ const DisplayAllContent = () => {
   const { userInfo } = useUserInfo();
 
 
+  const Usercontent = () => (
+    <ul>
+      <li><strong>Name:</strong> {userInfo.name}</li>
+      <li><strong>Fax:</strong> {userInfo.fax}</li>
+      <li><strong>Phone:</strong> {userInfo.phone}</li>
+      <li><strong>City:</strong> {userInfo.city}</li>
+      <li><strong>Email:</strong> {userInfo.email}</li>
+      <li><strong>Zipcode:</strong> {userInfo.zipcode}</li>
+      <li><strong>Address:</strong> {userInfo.address}</li>
+      <li><strong>Contact:</strong> {userInfo.contact}</li>
+    </ul>
+  );
+
 
   // generalInformation Information
   const userGeneralLabel = {
@@ -54,10 +67,9 @@ const DisplayAllContent = () => {
     cityGaraging: "City (Garaging)",
     stateGaraging: "State (Garaging)",
     zipCodeGaraging: "Zip Code (Garaging)",
-    phone: "Phone",
-    cellPhone: "Cell Phone",
-    fax: "Fax",
-    email: "Email Address",
+    businessPhone: "Business Phone",
+    businessCellPhone: "Business Cell Phone",
+    commericalFax: "Commerical Fax",
     radiusOfOperation: "Radius of Operation",
     currentInsurer: "Current Insurer",
     commoditiesHauled: "Commodities Hauled and %'s",
@@ -72,17 +84,19 @@ const DisplayAllContent = () => {
     typeOfBusiness: "Type of Business",
     categoryOfBusiness: "Category of Business",
     businessOperations: "Description of Business Operations",
+    commericalName: "Commerical Name",
     businessName: "Business Name",
     state: "State",
     feiNumber: "FEI Number",
     dba: "DBA",
     contactName: "Contact Name",
-    fax: "Fax",
-    phone: "Phone",
-    email: "Email",
-    city: "City",
-    address: "Address",
-    zipcode: "Zipcode",
+    businesFax: "Busines Fax",
+    commericalPhone: "Commerical Phone",
+    commericalEmail: "Commerical Email",
+    businesEmail: "Business Email Address",
+    commericalCity: "Commerical City",
+    commericalAddress: "Commerical Address",
+    commericalZipCode: "Commerical Zipcode",
     currentInsuranceCompany: "Current Insurance Company",
     currentPolicyExpirationDate: "Current Policy Expiration Date",
     yearsInsured: "Number of Years Insured",
@@ -91,30 +105,43 @@ const DisplayAllContent = () => {
   };
 
 
-  const Usercontent = () => (
-    <ul>
-      <li><strong>Name:</strong> {userInfo.name}</li>
-      <li><strong>Fax:</strong> {userInfo.fax}</li>
-      <li><strong>Phone:</strong> {userInfo.phone}</li>
-      <li><strong>City:</strong> {userInfo.city}</li>
-      <li><strong>Email:</strong> {userInfo.email}</li>
-      <li><strong>Zipcode:</strong> {userInfo.zipcode}</li>
-      <li><strong>Address:</strong> {userInfo.address}</li>
-      <li><strong>Contact:</strong> {userInfo.contact}</li>
-    </ul>
-  );
-
-
   const AdditionalUsercontent = () => (
     <ul>
-      {Object.entries(userInfo).map(([key, value]) => (
-        <li key={key}>
-          <strong>{userGeneralLabel[key]}:</strong> {value}
-        </li>
-      ))}
+      {Object.entries(userInfo).map(([key, value]) => {
+        // Check if the key exists in userGeneralLabel
+        if (userGeneralLabel.hasOwnProperty(key)) {
+          // Check if value is not an object (including null)
+          const isNotObjectOrNull = !(typeof value === "object" && value !== null);
+  
+          // If value is not an object or null, render it as it is
+          if (isNotObjectOrNull) {
+            return (
+              <li key={key}>
+                <strong>{userGeneralLabel[key]}:</strong> {value}
+              </li>
+            );
+          } else {
+            // If value is an object, map over its entries
+            return (
+              <li key={key}>
+                <strong>{userGeneralLabel[key]}:</strong>{" "}
+                {Object.entries(value).map(([nestedKey, nestedValue]) => (
+                  <div key={nestedKey}>
+                    <strong>{nestedKey}:</strong> {nestedValue}
+                  </div>
+                ))}
+              </li>
+            );
+          }
+        } else {
+          // Return null if the key is not found in userGeneralLabel
+          return null;
+        }
+      })}
     </ul>
   );
-
+  
+  
   const userInsuranceLabels = {
     currentIns: "Current Insurance Company",
     CurrentExp: "Current Policy Expiration Date",
