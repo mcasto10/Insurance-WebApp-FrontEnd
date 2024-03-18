@@ -43,7 +43,6 @@ function Login() {
         });
 
 
-        console.log('Sign-In Response:', responseCheckAuth);
 
 
 
@@ -75,7 +74,9 @@ function Login() {
           }
 
           try {
-            const responseUserAppointment = await axios.post('https://insurance-webapp-backend.onrender.com/user/checkUserAppointment', responseCheckAuth.data.user.userId, {
+
+
+            const responseUserAppointment = await axios.post('https://insurance-webapp-backend.onrender.com/user/checkUserAppointment', { Username: responseCheckAuth.data.user.userId }, {
               withCredentials: true,
             });
 
@@ -117,10 +118,6 @@ function Login() {
       });
 
 
-      console.log('Sign-In Response:', responseSignIn);
-
-
-
       if (responseSignIn.status === 200) {
         const userInfo = responseSignIn.data.userName;
         setUser(userInfo);
@@ -151,27 +148,24 @@ function Login() {
 
         else {
 
-          setLoading(true);
-
-
           try {
-            const responseUserAppointment = await axios.post('https://insurance-webapp-backend.onrender.com/user/checkUserAppointment', responseSignIn.data.userId, {
-              withCredentials: true,
-            });
+            setLoading(true);
 
-            console.log(responseUserAppointment);
-
-
+            const responseUserAppointment = await axios.post(
+              'http://localhost:3001/user/checkUserAppointment',
+              { Username: responseSignIn.data.userId }, // Send userId as an object
+              {
+                withCredentials: true,
+              }
+            );
 
             setUserAppointment(responseUserAppointment.data[0]);
-
-
           } catch (error) {
             console.error('Authentication status check failed:', error);
+          } finally {
+            setIsLoadingApp(false); // Set loading to false when data fetching completes
           }
         }
-
-
 
       } else {
         if (responseSignIn.data && responseSignIn.data.message) {
